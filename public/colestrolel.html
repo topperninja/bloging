@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding Cholesterol: Types, Causes, Risks, and Management | Health & Wellness Insights</title>
+    <meta name="description" content="A comprehensive guide to understanding cholesterol, including its types (LDL, HDL, Triglycerides), causes of imbalance, health risks, detailed prevention and management strategies, and key metrics for heart health.">
+    <meta name="keywords" content="cholesterol, high cholesterol, low cholesterol, LDL, HDL, triglycerides, heart health, cardiovascular disease, atherosclerosis, cholesterol causes, cholesterol symptoms, cholesterol prevention, cholesterol management, diet for cholesterol, statins">
+    <meta name="author" content="Health & Wellness Insights">
+    
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Favicon (using a heart emoji for heart health theme) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>❤️</text></svg>">
+    
+    <style>
+        /* Custom styles */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        :root {
+            --primary-blue: #3498db;
+            --light-blue: #e1f5fe;
+            --dark-blue: #0277bd;
+            --alert-red: #ff5252; /* Used for urgent alerts */
+            --alert-light: #ffebee;
+            --success-green: #4CAF50; /* For prevention successes */
+            --success-light: #e8f5e9;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        /* Loading animation */
+        #loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease-out;
+        }
+        
+        .health-icon {
+            width: 80px;
+            height: 80px;
+            position: relative;
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+        
+        .health-icon::before {
+            content: "🩺"; /* Medical symbol emoji */
+            font-size: 80px;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        
+        /* General header icon animation */
+        .header-icon-animate {
+            animation: zoomIn 2s ease-out forwards;
+        }
+
+        @keyframes zoomIn {
+            0% { transform: scale(0.5); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        
+        /* Custom button styles */
+        .btn-primary {
+            background-color: var(--primary-blue);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--dark-blue);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Card hover effects (applied to prevention tips) */
+        .prevention-tip {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .prevention-tip:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Styling for important notes */
+        .important-note {
+            border-left: 4px solid var(--alert-red);
+            background-color: var(--alert-light);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        /* Styling for prevention tips */
+        .prevention-tip-card {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            margin-bottom: 1rem;
+            border-top: 4px solid var(--primary-blue);
+        }
+        
+        /* Content section styling */
+        .content-section {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 2rem;
+        }
+        
+        /* Ad container styling */
+        .ad-container {
+            background: #f9f9f9;
+            border: 1px dashed #ddd;
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        /* General styling for headers and body text */
+        h1, h2, h3, h4 {
+            color: #1a202c; /* Darker heading color */
+            font-weight: 700;
+        }
+        p, ul, ol {
+            color: #4a5568; /* Slightly darker grey for readability */
+        }
+        a {
+            color: #2563eb; /* Blue for links */
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .section-separator {
+            border-top: 1px solid #e2e8f0; /* Light gray line */
+            margin-top: 2.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        /* Responsive adjustments for prose-like content */
+        .prose-like h1, .prose-like h2, .prose-like h3, .prose-like h4 {
+            margin-top: 1.5em;
+            margin-bottom: 0.8em;
+        }
+        .prose-like p {
+            margin-bottom: 1em;
+        }
+        .prose-like ul, .prose-like ol {
+            margin-bottom: 1em;
+            list-style-position: inside; /* Ensures bullets/numbers are inside padding */
+        }
+        .prose-like ul li, .prose-like ol li {
+            margin-bottom: 0.5em;
+        }
+    </style>
+    
+    <!-- Structured data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.healthwellnessinsights.com/understanding-cholesterol"
+      },
+      "headline": "Understanding Cholesterol: Types, Causes, Risks, and Management",
+      "description": "A comprehensive guide to understanding cholesterol, including its types (LDL, HDL, Triglycerides), causes of imbalance, health risks, detailed prevention and management strategies, and key metrics for heart health.",
+      "image": "https://www.healthwellnessinsights.com/images/cholesterol-banner.jpg",
+      "author": {
+        "@type": "Person",
+        "name": "Health & Wellness Insights Team"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Health & Wellness Insights",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.healthwellnessinsights.com/logo.png"
+        }
+      },
+      "datePublished": "2025-08-24",
+      "dateModified": "2025-08-24"
+    }
+    </script>
+</head>
+<body class="bg-blue-50">
+    <!-- Loading Animation -->
+    <div id="loading">
+        <div class="health-icon"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-2">
+                <span class="text-3xl">🩺</span> <!-- Medical symbol emoji -->
+                <span class="text-2xl font-bold text-blue-600">Health & Wellness Insights</span>
+            </a>
+            
+            <!-- Mobile menu button -->
+            <button id="mobile-menu-button" class="md:hidden text-blue-600">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+            
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-gray-600 hover:text-blue-600 font-medium">Home</a>
+                <a href="#about-us" class="text-gray-600 hover:text-blue-600 font-medium">About Us</a>
+                <a href="#health-articles" class="text-gray-600 hover:text-blue-600 font-medium">Health Articles</a>
+                <a href="#contact-us" class="text-gray-600 hover:text-blue-600 font-medium">Contact</a>
+            </nav>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-4 px-4">
+            <a href="index.html" class="block py-2 text-blue-600 font-medium">Home</a>
+            <a href="#about-us" class="block py-2 text-gray-600 hover:text-blue-600">About Us</a>
+            <a href="#health-articles" class="block py-2 text-gray-600 hover:text-blue-600">Health Articles</a>
+            <a href="#contact-us" class="block py-2 text-gray-600 hover:text-blue-600">Contact</a>
+        </div>
+    </header>
+
+    <!-- Blog Content -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- Breadcrumb -->
+        <nav class="text-sm text-gray-600 mb-8">
+            <a href="index.html" class="hover:text-blue-600">Home</a> > 
+            <a href="#health-articles" class="hover:text-blue-600">Health</a> > 
+            <span class="text-gray-800">Understanding Cholesterol</span>
+        </nav>
+        
+        <!-- Article Header -->
+        <article class="content-section mb-8">
+            <div class="flex justify-between items-center mb-4">
+                <div class="flex items-center text-sm text-gray-500">
+                    <span>Health</span>
+                    <span class="mx-2">•</span>
+                    <span>August 24, 2025</span>
+                    <span class="mx-2">•</span>
+                    <span>~20 min read</span>
+                </div>
+                <div class="text-sm text-gray-500">
+                    <button class="text-blue-500 hover:text-blue-700">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Understanding Cholesterol: Types, Causes, Risks, and Management</h1>
+            
+            <div class="flex items-center mb-6">
+                <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                    <span class="text-blue-600 font-medium">HWI</span>
+                </div>
+                <div>
+                    <p class="text-sm font-medium text-gray-800">Health & Wellness Insights Team</p>
+                    <p class="text-xs text-gray-500">Health Experts & Researchers</p>
+                </div>
+            </div>
+            
+            <div class="rounded-xl overflow-hidden mb-8 relative">
+                <div class="h-64 bg-gradient-to-r from-red-500 to-pink-600 flex items-center justify-center">
+                    <span class="text-8xl header-icon-animate">❤️</span> <!-- Heart emoji for cholesterol/heart health theme -->
+                </div>
+                <div class="absolute bottom-0 left-0 bg-pink-600 text-white text-sm font-medium px-4 py-2">
+                    Cardiovascular Health
+                </div>
+            </div>
+            
+            <div class="prose-like max-w-none">
+                <p class="text-lg text-gray-700 mb-6">
+                    Cholesterol, a waxy, fat-like substance, is often viewed negatively, but it is actually essential for life. Your body needs cholesterol to build healthy cells, produce hormones, and synthesize vitamin D. However, too much of certain types of cholesterol can lead to serious health problems, primarily cardiovascular disease. Understanding cholesterol — what it is, its different types, what causes imbalances, and how to manage it — is a crucial step towards maintaining a healthy heart and overall well-being.
+                </p>
+                <p class="text-lg text-gray-700 mb-6">
+                    In this comprehensive guide, Health & Wellness Insights will demystify cholesterol. We'll explore the roles of "good" (HDL) and "bad" (LDL) cholesterol, alongside triglycerides, and delve into the myriad factors that can lead to unhealthy levels. We'll detail the significant health risks associated with imbalanced cholesterol, from atherosclerosis to heart attack and stroke. Most importantly, we'll provide actionable, evidence-based strategies for preventing high cholesterol and managing existing conditions through lifestyle changes and medical interventions, empowering you to take control of your cardiovascular health.
+                </p>
+                
+                <!-- Table of Contents -->
+                <div class="bg-blue-50 p-6 rounded-lg mb-8">
+                    <h2 class="text-xl font-bold text-gray-800 mb-4">Table of Contents</h2>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li><a href="#introduction" class="text-blue-600 hover:text-blue-800">Introduction: Essential Yet Misunderstood</a></li>
+                        <li><a href="#what-is-cholesterol" class="text-blue-600 hover:text-blue-800">What is Cholesterol? Types and Functions</a>
+                            <ul class="list-circle pl-5 mt-1">
+                                <li><a href="#ldl-cholesterol" class="text-blue-500 hover:text-blue-700">LDL Cholesterol: The "Bad" Guy</a></li>
+                                <li><a href="#hdl-cholesterol" class="text-blue-500 hover:text-blue-700">HDL Cholesterol: The "Good" Guy</a></li>
+                                <li><a href="#triglycerides" class="text-blue-500 hover:text-blue-700">Triglycerides: Another Important Fat</a></li>
+                                <li><a href="#total-cholesterol" class="text-blue-500 hover:text-blue-700">Total Cholesterol</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#causes-high-cholesterol" class="text-blue-600 hover:text-blue-800">Causes of High Cholesterol: A Complex Picture</a>
+                            <ul class="list-circle pl-5 mt-1">
+                                <li><a href="#dietary-factors" class="text-blue-500 hover:text-blue-700">Dietary Factors</a></li>
+                                <li><a href="#lifestyle-factors" class="text-blue-500 hover:text-blue-700">Lifestyle Factors</a></li>
+                                <li><a href="#genetic-factors" class="text-blue-500 hover:text-blue-700">Genetic Factors</a></li>
+                                <li><a href="#medical-conditions" class="text-blue-500 hover:text-blue-700">Medical Conditions</a></li>
+                                <li><a href="#medications" class="text-blue-500 hover:text-blue-700">Medications</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#risks-complications" class="text-blue-600 hover:text-blue-800">Health Risks and Complications of High Cholesterol</a>
+                            <ul class="list-circle pl-5 mt-1">
+                                <li><a href="#atherosclerosis" class="text-blue-500 hover:text-blue-700">Atherosclerosis</a></li>
+                                <li><a href="#heart-attack-stroke" class="text-blue-500 hover:text-blue-700">Heart Attack and Stroke</a></li>
+                                <li><a href="#peripheral-artery-disease" class="text-blue-500 hover:text-blue-700">Peripheral Artery Disease (PAD)</a></li>
+                                <li><a href="#pancreatitis" class="text-blue-500 hover:text-blue-700">Pancreatitis (from High Triglycerides)</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#prevention-management" class="text-blue-600 hover:text-blue-800">Prevention and Management Strategies</a>
+                            <ul class="list-circle pl-5 mt-1">
+                                <li><a href="#dietary-changes" class="text-blue-500 hover:text-blue-700">Dietary Changes</a></li>
+                                <li><a href="#exercise-active" class="text-blue-500 hover:text-blue-700">Regular Physical Activity</a></li>
+                                <li><a href="#weight-loss" class="text-blue-500 hover:text-blue-700">Weight Loss</a></li>
+                                <li><a href="#quit-smoking" class="text-blue-500 hover:text-blue-700">Quit Smoking</a></li>
+                                <li><a href="#alcohol-moderation" class="text-blue-500 hover:text-blue-700">Moderate Alcohol Consumption</a></li>
+                                <li><a href="#medication-options" class="text-blue-500 hover:text-blue-700">Medication Options</a></li>
+                                <li><a href="#regular-screening" class="text-blue-500 hover:text-blue-700">Regular Screening and Monitoring</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#key-metrics" class="text-blue-600 hover:text-blue-800">Key Metrics for Healthy Cholesterol Levels</a></li>
+                        <li><a href="#when-to-seek-help" class="text-blue-600 hover:text-blue-800">When to Seek Medical Help</a></li>
+                        <li><a href="#conclusion" class="text-blue-600 hover:text-blue-800">Conclusion: Taking Control of Your Cholesterol Health</a></li>
+                    </ul>
+                </div>
+                
+                <div class="important-note mb-6">
+                    <h3 class="text-xl font-bold text-red-700 mb-2">⚠️ Disclaimer: Essential Health Information</h3>
+                    <p class="text-gray-800">
+                        This article provides general information and is not a substitute for professional medical advice. Always consult with a qualified healthcare provider for diagnosis, treatment, and medical decisions specific to your health condition.
+                    </p>
+                </div>
+
+                <!-- Google AdSense Ad -->
+                <div class="ad-container mb-8">
+                    <p class="text-xs text-gray-500 mb-2">Advertisement</p>
+                    <div class="h-64 bg-gray-100 flex items-center justify-center rounded">
+                        <p class="text-gray-500">Google AdSense Banner Ad Placeholder</p>
+                    </div>
+                </div>
+                
+                <!-- Section: Introduction -->
+                <section id="introduction" class="mb-10">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4">Introduction: Essential Yet Misunderstood</h2>
+                    <p class="text-gray-700 mb-4">
+                        Cholesterol is one of the most talked-about, yet frequently misunderstood, substances in human health. It's a waxy, fat-like substance found in every cell of your body. Far from being inherently bad, cholesterol is vital for numerous bodily functions. It's a key component of cell membranes, essential for the production of hormones (like estrogen, testosterone, and adrenal hormones), and necessary for the synthesis of vitamin D and bile acids, which aid in fat digestion. Your liver produces all the cholesterol your body needs, but you also get cholesterol from foods you eat, particularly animal products.
+                    </p>
+                    <p class="text-gray-700 mb-4">
+                        The problem arises when there's an imbalance in the types or amounts of cholesterol in your blood. High levels of certain types of cholesterol, especially low-density lipoprotein (LDL) cholesterol, can significantly increase your risk of heart disease, heart attack, and stroke. These conditions collectively fall under the umbrella of cardiovascular disease (CVD), which remains the leading cause of death globally. Understanding the nuances of cholesterol, distinguishing between its "good" and "bad" forms, identifying the factors that lead to unhealthy levels, and knowing how to manage it effectively are paramount for safeguarding your long-term health. This comprehensive guide from Health & Wellness Insights aims to clarify these complexities and empower you with actionable knowledge.
+                    </p>
+                    
+                    <div class="bg-blue-50 p-6 rounded-lg mb-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Cholesterol: A Double-Edged Sword</h3>
+                        <p class="text-gray-700 mb-4">
+                            Think of cholesterol as a necessary building block that, when properly regulated, supports vital bodily processes. However, when levels become unbalanced, particularly an excess of "bad" cholesterol, it can transform into a silent threat, gradually damaging your arteries and setting the stage for serious cardiovascular events. Unlike some conditions with obvious symptoms, high cholesterol often presents no warning signs until a critical event occurs.
+                        </p>
+                        <p class="text-gray-700">
+                            Therefore, regular screening and proactive management are not just recommended but essential for preventing the progression of cardiovascular disease.
+                        </p>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-100">
+                            <h4 class="font-bold text-gray-800 mb-2">Prevalence of High Cholesterol</h4>
+                            <p class="text-gray-700 text-sm">
+                                According to the CDC, nearly 94 million adults aged 20 or older in the United States have total cholesterol levels higher than 200 mg/dL, and about 29 million have total cholesterol levels higher than 240 mg/dL.
+                            </p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-100">
+                            <h4 class="font-bold text-gray-800 mb-2">The Silent Threat</h4>
+                            <p class="text-gray-700 text-sm">
+                                High cholesterol often has no symptoms. Many people only discover they have it after a routine blood test or, unfortunately, after experiencing a heart attack or stroke.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Section: What is Cholesterol? Types and Functions -->
+                <section id="what-is-cholesterol" class="mb-10">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4">What is Cholesterol? Types and Functions</h2>
+                    <p class="text-gray-700 mb-6">
+                        Cholesterol cannot travel through the blood on its own because it is a fatty substance, and blood is water-based. To travel, cholesterol is packaged into tiny particles called lipoproteins. These lipoproteins are crucial for understanding cholesterol's role in your health.
+                    </p>
+
+                    <h3 id="ldl-cholesterol" class="text-xl font-bold text-blue-700 mb-3">LDL Cholesterol: The "Bad" Guy (Low-Density Lipoprotein)</h3>
+                    <p class="text-gray-700 mb-4">
+                        LDL cholesterol is often referred to as "bad" cholesterol because high levels contribute to plaque buildup in your arteries. LDL particles carry cholesterol from the liver to the cells that need it.
+                    </p>
+                    <ul class="list-disc pl-6 mb-4 space-y-2 text-gray-700">
+                        <li><strong>Function:</strong> Delivers cholesterol to cells throughout the body.</li>
+                        <li><strong>Risk:</strong> When LDL levels are too high, it can deposit excess cholesterol in the walls of your arteries. This buildup, known as **atherosclerosis**, hardens and narrows the arteries, restricting blood flow. This is the primary precursor to heart attacks and strokes.</li>
+                        <li><strong>Target Level:</strong> Generally, lower LDL levels are better. An optimal LDL level is typically less than 100 mg/dL (2.6 mmol/L).</li>
+                    </ul>
+
+                    <h3 id="hdl-cholesterol" class="text-xl font-bold text-blue-700 mb-3">HDL Cholesterol: The "Good" Guy (High-Density Lipoprotein)</h3>
+                    <p class="text-gray-700 mb-4">
+                        HDL cholesterol is known as "good" cholesterol because it helps remove excess cholesterol from your arteries, preventing plaque buildup. HDL particles act like a "scavenger" crew, picking up cholesterol and returning it to the liver for removal from the body.
+                    </p>
+                    <ul class="list-disc pl-6 mb-4 space-y-2 text-gray-700">
+                        <li><strong>Function:</strong> Transports excess cholesterol from body tissues back to the liver for excretion (a process called reverse cholesterol transport). This helps prevent arterial plaque.</li>
+                        <li><strong>Protective Role:</strong> Higher HDL levels are associated with a lower risk of heart disease.</li>
+                        <li><strong>Target Level:</strong> Higher HDL levels are better. An optimal HDL level is typically 60 mg/dL (1.5 mmol/L) or higher.</li>
+                    </ul>
+
+                    <h3 id="triglycerides" class="text-xl font-bold text-blue-700 mb-3">Triglycerides: Another Important Fat</h3>
+                    <p class="text-gray-700 mb-4">
+                        Triglycerides are the most common type of fat in your body. They store excess energy from your diet. While not cholesterol, high levels of triglycerides are often found with high LDL and low HDL, and they also increase your risk of heart disease and, at very high levels, can lead to other serious conditions.
+                    </p>
+                    <ul class="list-disc pl-6 mb-4 space-y-2 text-gray-700">
+                        <li><strong>Function:</strong> Stores unused calories and provides energy for your body.</li>
+                        <li><strong>Risk:</strong> High triglycerides (hypertriglyceridemia) contribute to hardening of the arteries and are associated with an increased risk of heart disease, stroke, and, at very high levels (>500 mg/dL or 5.6 mmol/L), acute pancreatitis.</li>
+                        <li><strong>Target Level:</strong> Desirable levels are typically less than 150 mg/dL (1.7 mmol/L).</li>
+                    </ul>
+
+                    <h3 id="total-cholesterol" class="text-xl font-bold text-blue-700 mb-3">Total Cholesterol</h3>
+                    <p class="text-gray-700 mb-4">
+                        Total cholesterol is the sum of your LDL, HDL, and 20% of your triglyceride levels. It's a general measure, but looking at the individual components provides a more accurate picture of your risk.
+                    </p>
+                    <ul class="list-disc pl-6 mb-6 space-y-2 text-gray-700">
+                        <li><strong>Target Level:</strong> Desirable total cholesterol is typically less than 200 mg/dL (5.2 mmol/L). Levels between 200-239 mg/dL are considered borderline high, and 240 mg/dL or higher is high.</li>
+                    </ul>
+                </section>
+                
+                <!-- Google AdSense Ad -->
+                <div class="ad-container mb-8">
+                    <p class="text-xs text-gray-500 mb-2">Advertisement</p>
+                    <div class="h-64 bg-gray-100 flex items-center justify-center rounded">
+                        <p class="text-gray-500">Google AdSense Rectangle Ad Placeholder</p>
+                    </div>
+                </div>
+                
+                <!-- Section: Causes of High Cholesterol -->
+                <section id="causes-high-cholesterol" class="mb-10">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4">Causes of High Cholesterol: A Complex Picture</h2>
+                    <p class="text-gray-700 mb-6">
+                        High cholesterol, medically known as dyslipidemia, is often a result of a combination of factors, including diet, lifestyle, genetics, and underlying medical conditions. Understanding these causes can help you take targeted steps toward management and prevention.
+                    </p>
+                    
+                    <h3 id="dietary-factors" class="text-xl font-bold text-blue-700 mb-3">Dietary Factors: What You Eat Matters</h3>
+                    <p class="text-gray-700 mb-4">
+                        The food you consume has a direct and significant impact on your cholesterol levels.
+                    </p>
+                    <ul class="list-disc pl-6 mb-4 space-y-2 text-gray-700">
+                        <li><strong>Saturated Fats:</strong> Found primarily in red meat, full-fat dairy products, and some processed foods. Saturated fats increase your LDL ("bad") cholesterol.</li>
+                        <li><strong>Trans Fats:</strong> Often found in commercially baked goods, fried foods, and some processed snacks. Trans fats are particularly harmful as they raise LDL cholesterol and simultaneously lower HDL ("good") cholesterol.</li>
+                        <li><strong>Dietary Cholesterol:</strong> Found in animal products like egg yolks, shellfish, and organ meats. While the impact of dietary cholesterol on blood cholesterol levels is less direct than saturated and trans fats for many people, some individuals are more sensitive to it.</li>
+                        <li><strong>Added Sugars and Refined Carbohydrates:</strong> Diets high in added sugars (especially fructose) and refined carbohydrates can increase triglyceride levels and lower HDL cholesterol.</li>
+                    </ul>
+
+                    <h3 id="lifestyle-factors" class="text-xl font-bold text-blue-700 mb-3">Lifestyle Factors: Daily Habits and Their Impact</h3>
+                    <p class="text-gray-700 mb-4">
+                        Your daily habits play a critical role in determining your cholesterol profile.
+                    </p>
+                    <ul class="list-disc pl-6 mb-4 space-y-2 text-gray-700">
+                        <li><strong>Physical Inactivity:</strong> A sedentary lifestyle lowers HDL cholesterol and increases LDL cholesterol and triglycerides. Regular exercise improves these levels.</li>
+                        <li><strong>Obesity/Excess Weight:</strong> Being overweight or obese, especially carrying extra weight around the abdomen, tends to increase LDL cholesterol and triglycerides while lowering HDL cholesterol.</li>
+                        <li><strong>Smoking:</strong> Damages the walls of your blood vessels, making them more likely to accumulate fatty deposits. Smoking also lowers HDL cholesterol and increases LDL cholesterol.</li>
+                        <li><strong>Excessive Alcohol Consumption:</strong> Can significantly increase triglyceride levels.</li>
+                        <li><strong>Stress:</strong> Chronic stress can contribute to higher cholesterol levels, potentially through its impact on hormone regulation and unhealthy coping mechanisms like poor diet choices.</li>
+                    </ul>
+
+                    <h3 id="genetic-factors" class="text-xl font-bold text-blue-700 mb-3">Genetic Factors: Family History Matters</h3>
+                    <p class="text-gray-700 mb-4">
+                        Your genes influence how your body processes cholesterol.
+                    </p>
+                    <ul class="list-disc pl-6 mb-4 space-y-2 text-gray-700">
+                        <li><strong>Familial Hypercholesterolemia (FH):</strong> A common inherited disorder that causes very high LDL cholesterol levels from birth, significantly increasing the risk of early heart disease. It's often due to a defect in the gene for the LDL receptor.</li>
+                        <li><strong>Other Genetic Predispositions:</strong> Many genes can contribute to slightly higher or lower cholesterol levels, meaning that some individuals may have elevated cholesterol even with a healthy lifestyle.</li>
+                    </ul>
+
+                    <h3 id="medical-conditions" class="text-xl font-bold text-blue-700 mb-3">Medical Conditions: Underlying Health Issues</h3>
+                    <p class="text-gray-700 mb-4">
+                        Certain health conditions can impact your cholesterol levels.
+                    </p>
+                    <ul class="list-disc pl-6 mb-4 space-y-2 text-gray-700">
+                        <li><strong>Diabetes:</strong> Poorly controlled diabetes can increase LDL cholesterol and triglycerides while decreasing HDL cholesterol. This is often referred to as "diabetic dyslipidemia."</li>
+                        <li><strong>Hypothyroidism:</strong> An underactive thyroid gland means your body can't break down and remove excess LDL cholesterol as efficiently, leading to higher levels.</li>
+                        <li><strong>Kidney Disease:</strong> Chronic kidney disease can alter lipid metabolism, often leading to higher LDL and triglyceride levels.</li>
+                        <li><strong>Liver Disease:</strong> Some liver conditions can affect cholesterol production and removal.</li>
+                        <li><strong>Polycystic Ovary Syndrome (PCOS):</strong> Women with PCOS often have higher LDL and triglyceride levels and lower HDL.</li>
+                    </ul>
+
+                    <h3 id="medications" class="text-xl font-bold text-blue-700 mb-3">Medications: Unexpected Side Effects</h3>
+                    <p class="text-gray-700 mb-4">
+                        Some medications can have an impact on cholesterol levels.
+                    </p>
+                    <ul class="list-disc pl-6 mb-6 space-y-2 text-gray-700">
+                        <li><strong>Diuretics (Thiazides):</strong> Can sometimes increase total cholesterol, LDL, and triglycerides.</li>
+                        <li><strong>Beta-Blockers:</strong> Some older beta-blockers can increase triglycerides and slightly decrease HDL.</li>
+                        <li><strong>Corticosteroids:</strong> Can increase total cholesterol, LDL, and triglycerides.</li>
+                        <li><strong>Certain Antipsychotics:</strong> Some second-generation antipsychotics can lead to weight gain and adverse lipid changes.</li>
+                        <li><strong>Estrogen Therapy:</strong> Depending on the type and route of administration, estrogen can have varied effects on lipids. Oral estrogen tends to increase HDL and triglycerides.</li>
+                    </ul>
+                </section>
+                
+                <!-- Google AdSense Ad -->
+                <div class="ad-container mb-8">
+                    <p class="text-xs text-gray-500 mb-2">Advertisement</p>
+                    <div class="h-64 bg-gray-100 flex items-center justify-center rounded">
+                        <p class="text-gray-500">Google AdSense In-Article Ad Placeholder</p>
+                    </div>
+                </div>
+                
+                <!-- Section: Health Risks and Complications -->
+                <section id="risks-complications" class="mb-10">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4">Health Risks and Complications of High Cholesterol</h2>
+                    <p class="text-gray-700 mb-6">
+                        The most significant danger of high cholesterol is its role in the development and progression of cardiovascular disease. Because high cholesterol often has no symptoms, it silently damages your arteries over many years, significantly increasing your risk for life-threatening events.
+                    </p>
+
+                    <h3 id="atherosclerosis" class="text-xl font-bold text-blue-700 mb-3">Atherosclerosis: The Core Problem</h3>
+                    <p class="text-gray-700 mb-4">
+                        Atherosclerosis is a disease in which plaque (a fatty material made of cholesterol, fats, calcium, and other substances) builds up inside your arteries.
+                    </p>
+                    <ul class="list-disc pl-6 mb-4 space-y-2 text-gray-700">
+                        <li><strong>Plaque Formation:</strong> High LDL cholesterol is a key driver. LDL particles penetrate the arterial wall and become oxidized, triggering an inflammatory response. Macrophages (immune cells) engulf this oxidized LDL, becoming "foam cells" that contribute to plaque.</li>
+                        <li><strong>Artery Narrowing and Hardening:</strong> Over time, this plaque hardens and narrows your arteries, reducing blood flow. The arteries lose their elasticity, becoming stiff.</li>
+                        <li><strong>Reduced Blood Flow:</strong> This narrowing can affect any artery in the body, compromising blood supply to vital organs.</li>
+                    </ul>
+
+                    <h3 id="heart-attack-stroke" class="text-xl font-bold text-blue-700 mb-3">Heart Attack and Stroke: Critical Events</h3>
+                    <p class="text-gray-700 mb-4">
+                        Atherosclerosis is the primary cause of heart attacks and most strokes.
+                    </p>
+                    <ul class="list-disc pl-6 mb-4 space-y-2 text-gray-700">
+                        <li><strong>Heart Attack (Myocardial Infarction):</strong> If a plaque in a coronary artery (supplying the heart muscle) ruptures, a blood clot can form rapidly at the site of the rupture, completely blocking blood flow to a section of the heart muscle. This deprives heart cells of oxygen, leading to their death.</li>
+                        <li><strong>Stroke:</strong>
+                            <ul class="list-circle pl-6 mt-2 mb-2 space-y-1">
+                                <li><strong>Ischemic Stroke:</strong> Occurs when a blood clot (formed on a ruptured plaque or traveling from elsewhere, like the heart in atrial fibrillation) blocks an artery supplying the brain.</li>
+                                <li><strong>Transient Ischemic Attack (TIA):</strong> A "mini-stroke" caused by a temporary blockage, serving as a critical warning sign of impending stroke.</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h3 id="peripheral-artery-disease" class="text-xl font-bold text-blue-700 mb-3">Peripheral Artery Disease (PAD): Limbs Affected</h3>
+                    <p class="text-gray-700 mb-4">
+                        Atherosclerosis can also affect arteries supplying blood to your limbs, most commonly the legs.
+                    </p>
+                    <ul class="list-disc pl-6 mb-4 space-y-2 text-gray-700">
+                        <li><strong>Symptoms:</strong> Pain or cramping in the legs (claudication) during walking or exercise, numbness, weakness, coldness in the lower leg or foot, sores that don't heal, and changes in skin color or nail growth.</li>
+                        <li><strong>Risks:</strong> PAD significantly increases the risk of heart attack, stroke, and, in severe cases, amputation due to inadequate blood flow and non-healing wounds.</li>
+                    </ul>
+
+                    <h3 id="pancreatitis" class="text-xl font-bold text-blue-700 mb-3">Pancreatitis (from Very High Triglycerides)</h3>
+                    <p class="text-gray-700 mb-4">
+                        While not directly caused by cholesterol, extremely high levels of triglycerides (typically over 500 mg/dL or 5.6 mmol/L) pose a direct and acute health risk.
+                    </p>
+                    <ul class="list-disc pl-6 mb-6 space-y-2 text-gray-700">
+                        <li><strong>Acute Pancreatitis:</strong> Very high triglycerides can lead to sudden, severe inflammation of the pancreas, causing intense abdominal pain, nausea, vomiting, and potentially life-threatening complications.</li>
+                    </ul>
+                </section>
+                
+                <!-- Google AdSense Ad -->
+                <div class="ad-container mb-8">
+                    <p class="text-xs text-gray-500 mb-2">Advertisement</p>
+                    <div class="h-64 bg-gray-100 flex items-center justify-center rounded">
+                        <p class="text-gray-500">Google AdSense In-Article Ad Placeholder</p>
+                    </div>
+                </div>
+                
+                <!-- Section: Prevention and Management -->
+                <section id="prevention-management" class="mb-10">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4">Prevention and Management Strategies: Taking Control</h2>
+                    <p class="text-gray-700 mb-6">
+                        The good news about cholesterol is that for many people, unhealthy levels can be prevented, improved, or managed through lifestyle changes and, if necessary, medication. Taking a proactive approach is key to reducing your risk of cardiovascular disease.
+                    </p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                        <div id="dietary-changes" class="prevention-tip prevention-tip-card">
+                            <div class="text-3xl text-blue-600 mb-3">🥦</div>
+                            <h3 class="text-lg font-bold text-gray-800 mb-2">1. Adopt Heart-Healthy Dietary Changes</h3>
+                            <p class="text-gray-700 text-sm">
+                                Focus on reducing saturated and trans fats, dietary cholesterol, and added sugars. Increase intake of soluble fiber (oats, beans, apples) and omega-3 fatty acids (fatty fish, flaxseed). Embrace a diet rich in fruits, vegetables, whole grains, and lean proteins, like the Mediterranean Diet.
+                            </p>
+                        </div>
+                        
+                        <div id="exercise-active" class="prevention-tip prevention-tip-card">
+                            <div class="text-3xl text-blue-600 mb-3">🏃‍♀️</div>
+                            <h3 class="text-lg font-bold text-gray-800 mb-2">2. Engage in Regular Physical Activity</h3>
+                            <p class="text-gray-700 text-sm">
+                                Aim for at least 150 minutes of moderate-intensity aerobic exercise or 75 minutes of vigorous-intensity exercise per week. Physical activity helps lower LDL and raise HDL cholesterol, improves blood pressure, and aids in weight management.
+                            </p>
+                        </div>
+                        
+                        <div id="weight-loss" class="prevention-tip prevention-tip-card">
+                            <div class="text-3xl text-blue-600 mb-3">📉</div>
+                            <h3 class="text-lg font-bold text-gray-800 mb-2">3. Achieve and Maintain a Healthy Weight</h3>
+                            <p class="text-gray-700 text-sm">
+                                Losing even 5-10% of your body weight can significantly improve cholesterol levels, lowering LDL and triglycerides while increasing HDL. Focus on sustainable changes through diet and exercise.
+                            </p>
+                        </div>
+                        
+                        <div id="quit-smoking" class="prevention-tip prevention-tip-card">
+                            <div class="text-3xl text-blue-600 mb-3">🚭</div>
+                            <h3 class="text-lg font-bold text-gray-800 mb-2">4. Quit Smoking</h3>
+                            <p class="text-gray-700 text-sm">
+                                Smoking cessation rapidly improves HDL cholesterol levels and significantly reduces damage to blood vessel walls. Your risk of heart disease and stroke begins to drop soon after quitting.
+                            </p>
+                        </div>
+                        
+                        <div id="alcohol-moderation" class="prevention-tip prevention-tip-card">
+                            <div class="text-3xl text-blue-600 mb-3">🥂</div>
+                            <h3 class="text-lg font-bold text-gray-800 mb-2">5. Moderate Alcohol Consumption</h3>
+                            <p class="text-gray-700 text-sm">
+                                If you drink alcohol, do so in moderation (up to one drink per day for women, up to two for men). Excessive alcohol intake can increase triglyceride levels. Some studies suggest moderate red wine consumption *might* have a minor benefit for HDL, but it's not a reason to start drinking.
+                            </p>
+                        </div>
+                        
+                        <div id="medication-options" class="prevention-tip prevention-tip-card">
+                            <div class="text-3xl text-blue-600 mb-3">💊</div>
+                            <h3 class="text-lg font-bold text-gray-800 mb-2">6. Medication Options (If Needed)</h3>
+                            <p class="text-gray-700 text-sm">
+                                For some individuals, lifestyle changes alone may not be enough. Your doctor may prescribe medications like statins, PCSK9 inhibitors, cholesterol absorption inhibitors (e.g., ezetimibe), or fibrates (for high triglycerides) to help manage your cholesterol levels.
+                            </p>
+                        </div>
+
+                        <div id="regular-screening" class="prevention-tip prevention-tip-card">
+                            <div class="text-3xl text-blue-600 mb-3">🗓️</div>
+                            <h3 class="text-lg font-bold text-gray-800 mb-2">7. Regular Screening and Monitoring</h3>
+                            <p class="text-gray-700 text-sm">
+                                Get your cholesterol levels checked regularly (lipoprotein panel) as recommended by your doctor, usually every 4-6 years for adults aged 20 or older, and more frequently if you have risk factors or are on medication.
+                            </p>
+                        </div>
+
+                        <div id="manage-stress" class="prevention-tip prevention-tip-card">
+                            <div class="text-3xl text-blue-600 mb-3">🧘</div>
+                            <h3 class="text-lg font-bold text-gray-800 mb-2">8. Manage Stress and Get Quality Sleep</h3>
+                            <p class="text-gray-700 text-sm">
+                                Chronic stress and poor sleep can negatively impact cholesterol and overall cardiovascular health. Incorporate stress-reduction techniques and aim for 7-9 hours of quality sleep per night.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-green-50 p-6 rounded-lg">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Key Metrics for Healthy Cholesterol Levels</h3>
+                        <p class="text-gray-700 mb-4">
+                            These are general guidelines; your target levels may vary based on your individual health profile and risk factors. Always discuss your numbers with your healthcare provider.
+                        </p>
+                        <ol class="list-decimal pl-5 space-y-2 text-gray-700">
+                            <li><strong>Total Cholesterol:</strong> Less than 200 mg/dL (5.2 mmol/L)</li>
+                            <li><strong>LDL ("Bad") Cholesterol:</strong> Less than 100 mg/dL (2.6 mmol/L) - optimal; for those with CVD, often even lower targets</li>
+                            <li><strong>HDL ("Good") Cholesterol:</strong> 60 mg/dL (1.5 mmol/L) or higher - optimal; 40-59 mg/dL is good; less than 40 mg/dL is poor.</li>
+                            <li><strong>Triglycerides:</strong> Less than 150 mg/dL (1.7 mmol/L)</li>
+                            <li><strong>Non-HDL Cholesterol:</strong> Less than 130 mg/dL (3.4 mmol/L) - often a better predictor than LDL alone.</li>
+                        </ol>
+                    </div>
+                </section>
+                
+                <!-- Google AdSense Ad -->
+                <div class="ad-container mb-8">
+                    <p class="text-xs text-gray-500 mb-2">Advertisement</p>
+                    <div class="h-64 bg-gray-100 flex items-center justify-center rounded">
+                        <p class="text-gray-500">Google AdSense In-Article Ad Placeholder</p>
+                    </div>
+                </div>
+                
+                <!-- Section: When to Seek Medical Help -->
+                <section id="when-to-seek-help" class="mb-10">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4">When to Seek Medical Help for Cholesterol</h2>
+                    
+                    <div class="important-note mb-6">
+                        <h3 class="text-xl font-bold text-red-700 mb-2">🚨 Don't Wait for Symptoms!</h3>
+                        <p class="text-gray-800 font-bold">
+                            High cholesterol typically has no symptoms. The time to act is *before* a cardiovascular event occurs. Regular check-ups are your primary defense.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow-sm mb-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Consult Your Doctor If:</h3>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="bg-red-600 text-white rounded-full h-8 w-8 flex items-center justify-center flex-shrink-0 mr-4">1</div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">You haven't had a cholesterol check recently (or ever)</h4>
+                                    <p class="text-gray-700">
+                                        All adults over 20 should have their cholesterol checked every 4-6 years, or more frequently if risk factors are present.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-red-600 text-white rounded-full h-8 w-8 flex items-center justify-center flex-shrink-0 mr-4">2</div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">You have known risk factors for heart disease</h4>
+                                    <p class="text-gray-700">
+                                        This includes high blood pressure, diabetes, a family history of early heart disease, smoking, or obesity.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-red-600 text-white rounded-full h-8 w-8 flex items-center justify-center flex-shrink-0 mr-4">3</div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">You receive abnormal cholesterol test results</h4>
+                                    <p class="text-gray-700">
+                                        Your doctor can explain what your numbers mean for your personal health and discuss appropriate lifestyle changes or medication.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-red-600 text-white rounded-full h-8 w-8 flex items-center justify-center flex-shrink-0 mr-4">4</div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">You experience symptoms related to cardiovascular disease</h4>
+                                    <p class="text-gray-700">
+                                        If you have chest pain, shortness of breath, leg pain during walking, or symptoms of stroke, seek immediate medical attention. High cholesterol is a key contributor to these.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-blue-100 p-6 rounded-lg">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Addressing Familial Hypercholesterolemia (FH)</h3>
+                        <p class="text-gray-700 mb-4">
+                            If you have a strong family history of very high cholesterol or early heart disease, you might have FH. It's crucial to get screened early. FH often requires medication (like high-dose statins) in addition to lifestyle changes, as diet and exercise alone may not be sufficient to bring cholesterol to healthy levels. Early diagnosis and treatment are vital to prevent severe complications.
+                        </p>
+                    </div>
+                </section>
+                
+                <!-- Conclusion Section -->
+                <section id="conclusion">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4">Conclusion: Taking Control of Your Cholesterol Health</h2>
+                    <p class="text-gray-700 mb-6">
+                        Cholesterol, while a vital component of human biology, demands our attention when its delicate balance is disturbed. This comprehensive guide from Health & Wellness Insights has illuminated the different types of cholesterol, unravelled the complex interplay of dietary, lifestyle, genetic, and medical factors that contribute to high levels, and starkly outlined the severe cardiovascular risks that an imbalanced cholesterol profile poses.
+                    </p>
+                    <p class="text-gray-700 mb-6">
+                        The overwhelming message is one of empowerment: high cholesterol is largely preventable and manageable. By adopting a heart-healthy diet rich in whole foods, committing to regular physical activity, maintaining a healthy weight, and eliminating harmful habits like smoking, you gain significant control over your cholesterol levels. For many, these lifestyle changes are sufficient. For others, particularly those with genetic predispositions or stubborn high levels, medication, under the guidance of a healthcare professional, offers a powerful tool for protection.
+                    </p>
+                    <p class="text-gray-700 mb-6">
+                        Since high cholesterol often presents no warning signs, regular screening and proactive discussions with your doctor are your best defense. Don't wait for symptoms to appear. Take the initiative to understand your numbers, assess your risk, and implement a personalized management plan. Your heart health is in your hands. By embracing informed choices and consistent care, you can significantly reduce your risk of heart disease and pave the way for a longer, healthier, and more vibrant life.
+                    </p>
+                </section>
+            </div>
+        </article>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-6 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-sm">&copy; 2025 Health & Wellness Insights. All rights reserved.</p>
+            <p class="text-sm mt-1">
+                <a href="#" class="hover:text-blue-300">Privacy Policy</a> |
+                <a href="#" class="hover:text-blue-300">Terms of Service</a> |
+                <a href="#" class="hover:text-blue-300">About Us</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Loading Animation and Mobile Menu -->
+    <script>
+        window.addEventListener('load', () => {
+            const loadingScreen = document.getElementById('loading');
+            if (loadingScreen) {
+                loadingScreen.style.opacity = '0';
+                setTimeout(() => {
+                    loadingScreen.style.display = 'none';
+                }, 500); // Wait for the fade-out transition to complete
+            }
+        });
+
+        document.getElementById('mobile-menu-button').addEventListener('click', () => {
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (mobileMenu) {
+                mobileMenu.classList.toggle('hidden');
+            }
+        });
+
+        // Smooth scroll for table of contents
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 70, // Adjust for fixed header height
+                        behavior: 'smooth'
+                    });
+                     // Close mobile menu after clicking a link
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

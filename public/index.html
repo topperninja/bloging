@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Topper Ninja - Health, Money & Interesting Facts Blog</title>
+    <meta
+      name="description"
+      content="Discover expert articles on health, money-making strategies, and fascinating facts. Become a life ninja with Topper Ninja blog."
+    />
+    <meta
+      name="keywords"
+      content="blog, health, make money, interesting facts, self-improvement"
+    />
+    <meta name="author" content="Topper Ninja" />
+    <!-- Open Graph for Facebook -->
+    <meta
+      property="og:title"
+      content="Topper Ninja - Health, Money & Interesting Facts Blog"
+    />
+    <meta
+      property="og:description"
+      content="Expert tips on health, money-making, and fascinating facts."
+    />
+    <meta property="og:image" content="https://www.topperninja.com/logo.png" />
+    <meta property="og:url" content="https://www.topperninja.com/" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Topper Ninja - Health, Money & Interesting Facts Blog"
+    />
+    <meta
+      name="twitter:description"
+      content="Expert tips on health, money-making, and fascinating facts."
+    />
+    <meta name="twitter:image" content="https://www.topperninja.com/logo.png" />
+
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta
+      name="google-site-verification"
+      content="Ym5LwUeksVZ4Vfd_CPGtLR38TaZSC6FQLXD8DiIG3B8"
+    />
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🥷</text></svg>"
+    />
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-2XKXCLKYC1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-2XKXCLKYC1");
+    </script>
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1976234535616337"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      /* Custom styles */
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+      :root {
+        --primary-blue: #3498db;
+        --light-blue: #e1f5fe;
+        --dark-blue: #0277bd;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        scroll-behavior: smooth;
+      }
+
+      /* Ninja loading animation */
+      #loading {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+        transition: opacity 0.5s ease-out;
+      }
+
+      .ninja-icon {
+        width: 80px;
+        height: 80px;
+        position: relative;
+        animation: spin 1.5s linear infinite;
+      }
+
+      .ninja-icon::before {
+        content: "🥷";
+        font-size: 80px;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      /* Custom button styles */
+      .btn-primary {
+        background-color: var(--primary-blue);
+        transition: all 0.3s ease;
+      }
+
+      .btn-primary:hover {
+        background-color: var(--dark-blue);
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Card hover effects */
+      .blog-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .blog-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Category icon styles */
+      .category-icon {
+        transition: transform 0.3s ease;
+      }
+
+      .category-card:hover .category-icon {
+        transform: scale(1.1);
+      }
+    </style>
+
+    <!-- Structured data for SEO -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Topper Ninja",
+        "url": "https://www.topperninja.com/",
+        "description": "Expert blog on health, money-making strategies, and interesting facts",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "{search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }
+    </script>
+  </head>
+  <body class="bg-blue-50">
+    <!-- Loading Animation -->
+    <div id="loading">
+      <div class="ninja-icon"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+      <div
+        class="container mx-auto px-4 py-3 flex justify-between items-center"
+      >
+        <a href="#" class="flex items-center space-x-2">
+          <span class="text-3xl">🥷</span>
+          <span class="text-2xl font-bold text-blue-600">Topper Ninja</span>
+        </a>
+
+        <!-- Mobile menu button -->
+        <button id="mobile-menu-button" class="md:hidden text-blue-600">
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            ></path>
+          </svg>
+        </button>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex space-x-8">
+          <a href="#home" class="text-blue-600 hover:text-blue-800 font-medium"
+            >Home</a
+          >
+          <a href="#about" class="text-gray-600 hover:text-blue-600 font-medium"
+            >About</a
+          >
+          <a
+            href="#categories"
+            class="text-gray-600 hover:text-blue-600 font-medium"
+            >Categories</a
+          >
+          <a
+            href="#latest"
+            class="text-gray-600 hover:text-blue-600 font-medium"
+            >Latest Posts</a
+          >
+        </nav>
+      </div>
+
+      <!-- Mobile Navigation -->
+      <div id="mobile-menu" class="hidden md:hidden bg-white py-4 px-4">
+        <a href="#home" class="block py-2 text-blue-600 font-medium">Home</a>
+        <a href="#about" class="block py-2 text-gray-600 hover:text-blue-600"
+          >About</a
+        >
+        <a
+          href="#categories"
+          class="block py-2 text-gray-600 hover:text-blue-600"
+          >Categories</a
+        >
+        <a href="#latest" class="block py-2 text-gray-600 hover:text-blue-600"
+          >Latest Posts</a
+        >
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="py-16 md:py-24 bg-gradient-to-r from-blue-100 to-blue-200"
+    >
+      <div
+        class="container mx-auto px-4 flex flex-col md:flex-row items-center"
+      >
+        <div class="md:w-1/2 mb-10 md:mb-0">
+          <h1
+            class="text-4xl md:text-5xl font-bold text-gray-800 leading-tight mb-4"
+          >
+            Become a <span class="text-blue-600">Ninja</span> in Your Health,
+            Wealth, and Knowledge
+          </h1>
+          <p class="text-xl text-gray-600 mb-8">
+            Expert tips and insights to master your health, boost your income,
+            and expand your mind with fascinating facts.
+          </p>
+          <div class="flex space-x-4">
+            <a
+              href="#latest"
+              class="px-6 py-3 bg-blue-600 text-white rounded-lg font-medium shadow-lg btn-primary"
+            >
+              Read Latest Posts
+            </a>
+            <a
+              href="#categories"
+              class="px-6 py-3 bg-white text-blue-600 border border-blue-600 rounded-lg font-medium shadow-lg hover:bg-blue-50 transition duration-300"
+            >
+              Explore Categories
+            </a>
+          </div>
+        </div>
+        <div class="md:w-1/2 flex justify-center">
+          <div
+            class="relative w-64 h-64 md:w-80 md:h-80 bg-blue-500 rounded-full flex items-center justify-center"
+          >
+            <div class="text-white text-8xl md:text-9xl">🥷</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">
+          About Topper Ninja
+        </h2>
+        <div class="flex flex-col md:flex-row items-center">
+          <div class="md:w-1/2 mb-10 md:mb-0">
+            <div class="bg-blue-100 p-6 rounded-xl shadow-lg">
+              <p class="text-lg text-gray-700 mb-4">
+                Topper Ninja is a premier blog dedicated to helping you excel in
+                three key areas of life: health, wealth, and knowledge.
+              </p>
+              <p class="text-lg text-gray-700 mb-4">
+                Our team of expert writers and researchers are passionate about
+                delivering well-researched, actionable content that can
+                transform your life.
+              </p>
+              <p class="text-lg text-gray-700">
+                We believe that everyone has an inner ninja waiting to be
+                unleashed - and we're here to help you discover yours!
+              </p>
+            </div>
+          </div>
+          <div class="md:w-1/2 md:pl-12">
+            <div class="grid grid-cols-2 gap-4">
+              <div
+                class="bg-blue-600 text-white p-4 rounded-lg shadow-md text-center"
+              >
+                <div class="text-3xl font-bold mb-2">500+</div>
+                <div>Articles Published</div>
+              </div>
+              <div
+                class="bg-blue-500 text-white p-4 rounded-lg shadow-md text-center"
+              >
+                <div class="text-3xl font-bold mb-2">100K+</div>
+                <div>Monthly Readers</div>
+              </div>
+              <div
+                class="bg-blue-400 text-white p-4 rounded-lg shadow-md text-center"
+              >
+                <div class="text-3xl font-bold mb-2">15+</div>
+                <div>Expert Writers</div>
+              </div>
+              <div
+                class="bg-blue-300 text-white p-4 rounded-lg shadow-md text-center"
+              >
+                <div class="text-3xl font-bold mb-2">3</div>
+                <div>Content Categories</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog Categories -->
+    <section id="categories" class="py-16 bg-blue-50">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-4">
+          Blog Categories
+        </h2>
+        <p class="text-xl text-center text-gray-600 mb-12">
+          Explore our three main content categories
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Health Category -->
+          <div
+            class="bg-white rounded-xl shadow-md overflow-hidden category-card"
+          >
+            <div class="h-48 bg-green-100 flex items-center justify-center">
+              <span class="text-6xl category-icon">💚</span>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">
+                Health & Wellness
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Discover expert advice on nutrition, fitness, mental health, and
+                lifestyle habits to optimize your wellbeing.
+              </p>
+              <a
+                href="#"
+                class="text-blue-600 font-medium hover:text-blue-800 inline-flex items-center"
+              >
+                Explore Health Articles
+                <svg
+                  class="w-4 h-4 ml-1"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Make Money Category -->
+          <div
+            class="bg-white rounded-xl shadow-md overflow-hidden category-card"
+          >
+            <div class="h-48 bg-yellow-100 flex items-center justify-center">
+              <span class="text-6xl category-icon">💸</span>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Make Money</h3>
+              <p class="text-gray-600 mb-4">
+                Learn proven strategies to increase your income, build wealth,
+                and achieve financial freedom through side hustles and
+                investing.
+              </p>
+              <a
+                href="#"
+                class="text-blue-600 font-medium hover:text-blue-800 inline-flex items-center"
+              >
+                Explore Money Articles
+                <svg
+                  class="w-4 h-4 ml-1"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Interesting Facts Category -->
+          <div
+            class="bg-white rounded-xl shadow-md overflow-hidden category-card"
+          >
+            <div class="h-48 bg-purple-100 flex items-center justify-center">
+              <span class="text-6xl category-icon">🧠</span>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">
+                Interesting Facts
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Expand your knowledge with fascinating facts about science,
+                history, psychology, and the world around us.
+              </p>
+              <a
+                href="#"
+                class="text-blue-600 font-medium hover:text-blue-800 inline-flex items-center"
+              >
+                Explore Fact Articles
+                <svg
+                  class="w-4 h-4 ml-1"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Latest Posts -->
+    <section id="latest" class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-4">
+          Latest Posts
+        </h2>
+        <p class="text-xl text-center text-gray-600 mb-12">
+          Discover our most recent articles
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Post 1 -->
+          <article
+            class="bg-white rounded-xl shadow-md overflow-hidden blog-card"
+          >
+            <div class="h-48 bg-blue-100"></div>
+            <div class="p-6">
+              <div class="flex items-center text-sm text-gray-500 mb-2">
+                <span>Health</span>
+                <span class="mx-2">•</span>
+                <span>May 15, 2023</span>
+              </div>
+              <h3 class="text-xl font-bold text-gray-800 mb-3">
+                10 Morning Habits That Boost Your Metabolism
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Start your day right with these science-backed habits that can
+                kickstart your metabolism and improve your energy levels.
+              </p>
+              <a
+                href="#"
+                class="text-blue-600 font-medium hover:text-blue-800 inline-flex items-center"
+              >
+                Read More
+                <svg
+                  class="w-4 h-4 ml-1"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Post 2 -->
+          <article
+            class="bg-white rounded-xl shadow-md overflow-hidden blog-card"
+          >
+            <div class="h-48 bg-green-100"></div>
+            <div class="p-6">
+              <div class="flex items-center text-sm text-gray-500 mb-2">
+                <span>Make Money</span>
+                <span class="mx-2">•</span>
+                <span>May 12, 2023</span>
+              </div>
+              <h3 class="text-xl font-bold text-gray-800 mb-3">
+                7 Passive Income Streams You Can Start This Month
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Explore these realistic passive income ideas that can help you
+                build wealth without trading all your time for money.
+              </p>
+              <a
+                href="#"
+                class="text-blue-600 font-medium hover:text-blue-800 inline-flex items-center"
+              >
+                Read More
+                <svg
+                  class="w-4 h-4 ml-1"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Post 3 -->
+          <article
+            class="bg-white rounded-xl shadow-md overflow-hidden blog-card"
+          >
+            <div class="h-48 bg-purple-100"></div>
+            <div class="p-6">
+              <div class="flex items-center text-sm text-gray-500 mb-2">
+                <span>Interesting Facts</span>
+                <span class="mx-2">•</span>
+                <span>May 10, 2023</span>
+              </div>
+              <h3 class="text-xl font-bold text-gray-800 mb-3">
+                The Science Behind Deja Vu: Explained
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Unravel the mystery of deja vu with this deep dive into the
+                neurological and psychological explanations for this common
+                phenomenon.
+              </p>
+              <a
+                href="#"
+                class="text-blue-600 font-medium hover:text-blue-800 inline-flex items-center"
+              >
+                Read More
+                <svg
+                  class="w-4 h-4 ml-1"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <div class="text-center mt-12">
+          <a
+            href="#"
+            class="px-6 py-3 bg-blue-600 text-white rounded-lg font-medium shadow-lg btn-primary inline-flex items-center"
+          >
+            View All Articles
+            <svg
+              class="w-4 h-4 ml-2"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"
+              ></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="py-16 bg-blue-600 text-white">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold mb-4">Join the Topper Ninja Community</h2>
+        <p class="text-xl mb-8 max-w-2xl mx-auto">
+          Subscribe to our newsletter for exclusive content, updates, and tips
+          not found on our blog.
+        </p>
+
+        <form class="max-w-md mx-auto flex flex-col md:flex-row gap-4">
+          <input
+            type="email"
+            placeholder="Your email address"
+            class="flex-grow px-4 py-3 rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-300"
+          />
+          <button
+            type="submit"
+            class="px-6 py-3 bg-white text-blue-600 font-medium rounded-lg shadow-md hover:bg-blue-50 transition duration-300"
+          >
+            Subscribe
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div>
+            <a href="#" class="flex items-center space-x-2 mb-4">
+              <span class="text-3xl">🥷</span>
+              <span class="text-xl font-bold">Topper Ninja</span>
+            </a>
+            <p class="text-gray-400">
+              Helping you master health, wealth, and knowledge through
+              well-researched content and expert advice.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-bold mb-4">Categories</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white"
+                  >Health & Wellness</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white"
+                  >Make Money</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white"
+                  >Interesting Facts</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="#home" class="text-gray-400 hover:text-white">Home</a>
+              </li>
+              <li>
+                <a href="#about" class="text-gray-400 hover:text-white"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a href="#categories" class="text-gray-400 hover:text-white"
+                  >Categories</a
+                >
+              </li>
+              <li>
+                <a href="#latest" class="text-gray-400 hover:text-white"
+                  >Latest Posts</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-bold mb-4">Connect With Us</h3>
+            <div class="flex space-x-4">
+              <a href="#" class="text-gray-400 hover:text-white">
+                <svg
+                  class="w-6 h-6"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                  />
+                </svg>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-white">
+                <svg
+                  class="w-6 h-6"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723 10.033 10.033 0 01-3.127 1.184 4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.937 4.937 0 004.604 3.417 9.868 9.868 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63a9.936 9.936 0 002.46-2.548l-.047-.02z"
+                  />
+                </svg>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-white">
+                <svg
+                  class="w-6 h-6"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400"
+        >
+          <p>© 2025 Topper Ninja. All rights reserved.</p>
+        </div>
+      </div>
+      <a href="heartattact.html" style="display: none"></a>
+      <a href="anotherheartdesease.html" style="display: none"></a>
+      <a href="dibatices.html" style="display: none"></a>
+      <a href="strok.html" style="display: none"></a>
+      <a href="colestrolel.html" style="display: none"></a>
+      <a href="onlinemonney.html" style="display: none"></a>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+      // Wait for page to load
+      window.addEventListener("load", function () {
+        // Hide loading animation
+        const loading = document.getElementById("loading");
+        setTimeout(function () {
+          loading.style.opacity = "0";
+          setTimeout(function () {
+            loading.style.display = "none";
+          }, 500);
+        }, 1000);
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById("mobile-menu-button");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        mobileMenuButton.addEventListener("click", function () {
+          mobileMenu.classList.toggle("hidden");
+        });
+
+        // Close mobile menu when clicking on a link
+        const mobileMenuLinks = mobileMenu.querySelectorAll("a");
+        mobileMenuLinks.forEach((link) => {
+          link.addEventListener("click", function () {
+            mobileMenu.classList.add("hidden");
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

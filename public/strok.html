@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding Stroke: Causes, Symptoms, Prevention, and Emergency Response | Health & Wellness Insights</title>
+    <meta name="description" content="A comprehensive guide to understanding stroke, including its types (ischemic, hemorrhagic, TIA), causes, critical symptoms (FAST acronym), detailed prevention strategies, and life-saving emergency response. Empower yourself with knowledge for better brain health.">
+    <meta name="keywords" content="stroke, ischemic stroke, hemorrhagic stroke, TIA, mini-stroke, stroke causes, stroke symptoms, FAST test, stroke prevention, brain health, cardiovascular health, emergency stroke response, life after stroke">
+    <meta name="author" content="Health & Wellness Insights">
+    
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Favicon (using a brain emoji for stroke theme) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧠</text></svg>">
+    
+    <style>
+        /* Custom styles */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        :root {
+            --primary-blue: #3498db;
+            --light-blue: #e1f5fe;
+            --dark-blue: #0277bd;
+            --alert-red: #ff5252; /* Used for urgent alerts */
+            --alert-light: #ffebee;
+            --success-green: #4CAF50; /* For prevention successes */
+            --success-light: #e8f5e9;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        /* Loading animation */
+        #loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease-out;
+        }
+        
+        .health-icon {
+            width: 80px;
+            height: 80px;
+            position: relative;
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+        
+        .health-icon::before {
+            content: "🧠"; /* Brain emoji */
+            font-size: 80px;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        
+        /* General header icon animation */
+        .header-icon-animate {
+            animation: zoomIn 2s ease-out forwards;
+        }
+
+        @keyframes zoomIn {
+            0% { transform: scale(0.5); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        
+        /* Custom button styles */
+        .btn-primary {
+            background-color: var(--primary-blue);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--dark-blue);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Card hover effects (applied to prevention tips) */
+        .prevention-tip {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .prevention-tip:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Styling for important notes */
+        .important-note {
+            border-left: 4px solid var(--alert-red);
+            background-color: var(--alert-light);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        /* Styling for prevention tips */
+        .prevention-tip-card {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            margin-bottom: 1rem;
+            border-top: 4px solid var(--primary-blue);
+        }
+        
+        /* Content section styling */
+        .content-section {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 2rem;
+        }
+        
+        /* Ad container styling */
+        .ad-container {
+            background: #f9f9f9;
+            border: 1px dashed #ddd;
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        /* General styling for headers and body text */
+        h1, h2, h3, h4 {
+            color: #1a202c; /* Darker heading color */
+            font-weight: 700;
+        }
+        p, ul, ol {
+            color: #4a5568; /* Slightly darker grey for readability */
+        }
+        a {
+            color: #2563eb; /* Blue for links */
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .section-separator {
+            border-top: 1px solid #e2e8f0; /* Light gray line */
+            margin-top: 2.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        /* Responsive adjustments for prose-like content */
+        .prose-like h1, .prose-like h2, .prose-like h3, .prose-like h4 {
+            margin-top: 1.5em;
+            margin-bottom: 0.8em;
+        }
+        .prose-like p {
+            margin-bottom: 1em;
+        }
+        .prose-like ul, .prose-like ol {
+            margin-bottom: 1em;
+            list-style-position: inside; /* Ensures bullets/numbers are inside padding */
+        }
+        .prose-like ul li, .prose-like ol li {
+            margin-bottom: 0.5em;
+        }
+    </style>
+    
+    <!-- Structured data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.healthwellnessinsights.com/understanding-stroke"
+      },
+      "headline": "Understanding Stroke: Causes, Symptoms, Prevention, and Emergency Response",
+      "description": "A comprehensive guide to understanding stroke, including its types (ischemic, hemorrhagic, TIA), causes, critical symptoms (FAST acronym), detailed prevention strategies, and life-saving emergency response. Empower yourself with knowledge for better brain health.",
+      "image": "https://www.healthwellnessinsights.com/images/stroke-banner.jpg",
+      "author": {
+        "@type": "Person",
+        "name": "Health & Wellness Insights Team"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Health & Wellness Insights",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.healthwellnessinsights.com/logo.png"
+        }
+      },
+      "datePublished": "2025-08-24",
+      "dateModified": "2025-08-24"
+    }
+    </script>
+</head>
+<body class="bg-blue-50">
+    <!-- Loading Animation -->
+    <div id="loading">
+        <div class="health-icon"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-2">
+                <span class="text-3xl">🩺</span> <!-- Medical symbol emoji -->
+                <span class="text-2xl font-bold text-blue-600">Health & Wellness Insights</span>
+            </a>
+            
+            <!-- Mobile menu button -->
+            <button id="mobile-menu-button" class="md:hidden text-blue-600">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+            
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-gray-600 hover:text-blue-600 font-medium">Home</a>
+                <a href="#about-us" class="text-gray-600 hover:text-blue-600 font-medium">About Us</a>
+                <a href="#health-articles" class="text-gray-600 hover:text-blue-600 font-medium">Health Articles</a>
+                <a href="#contact-us" class="text-gray-600 hover:text-blue-600 font-medium">Contact</a>
+            </nav>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-4 px-4">
+            <a href="index.html" class="block py-2 text-blue-600 font-medium">Home</a>
+            <a href="#about-us" class="block py-2 text-gray-600 hover:text-blue-600">About Us</a>
+            <a href="#health-articles" class="block py-2 text-gray-600 hover:text-blue-600">Health Articles</a>
+            <a href="#contact-us" class="block py-2 text-gray-600 hover:text-blue-600">Contact</a>
+        </div>
+    </header>
+
+    <!-- Blog Content -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- Breadcrumb -->
+        <nav class="text-sm text-gray-600 mb-8">
+            <a href="index.html" class="hover:text-blue-600">Home</a> > 
+            <a href="#health-articles" class="hover:text-blue-600">Health</a> > 
+            <span class="text-gray-800">Understanding Stroke</span>
+        </nav>
+        
+        <!-- Article Header -->
+        <article class="content-section mb-8">
+            <div class="flex justify-between items-center mb-4">
+                <div class="flex items-center text-sm text-gray-500">
+                    <span>Health</span>
+                    <span class="mx-2">•</span>
+                    <span>August 24, 2025</span>
+                    <span class="mx-2">•</span>
+                    <span>~20 min read</span>
+                </div>
+                <div class="text-sm text-gray-500">
+                    <button class="text-blue-500 hover:text-blue-700">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Understanding Stroke: Causes, Symptoms, Prevention, and Emergency Response</h1>
+            
+            <div class="flex items-center mb-6">
+                <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                    <span class="text-blue-600 font-medium">HWI</span>
+                </div>
+                <div>
+                    <p class="text-sm font-medium text-gray-800">Health & Wellness Insights Team</p>
+                    <p class="text-xs text-gray-500">Health Experts & Researchers</p>
+                </div>
+            </div>
+            
+            <div class="rounded-xl overflow-hidden mb-8 relative">
+                <div class="h-64 bg-gradient-to-r from-purple-500 to-indigo-600 flex items-center justify-center">
+                    <span class="text-8xl header-icon-animate">🧠</span> <!-- Brain emoji for stroke theme -->
+                </div>
+                <div class="absolute bottom-0 left-0 bg-indigo-600 text-white text-sm font-medium px-4 py-2">
+                    Neurological Health
+                </div>
+            </div>
+            
+            <div class="prose-like max-w-none">
+                <p class="text-lg text-gray-700 mb-6">
+                    A stroke, often referred to as a "brain attack," occurs when the blood supply to part of your brain is interrupted or severely reduced. This deprives brain tissue of oxygen and nutrients, causing brain cells to die rapidly. Strokes are a leading cause of death and long-term disability worldwide, making understanding them critical for public health. The impact of a stroke can be devastating, affecting everything from speech and movement to memory and cognitive function. However, many strokes are preventable, and recognizing the warning signs and acting quickly can significantly improve outcomes.
+                </p>
+                <p class="text-lg text-gray-700 mb-6">
+                    This comprehensive guide aims to shed light on all aspects of stroke. We will delve into the different types of strokes, explore their underlying causes and common risk factors, and detail the critical symptoms that demand immediate attention. Furthermore, we will outline effective prevention strategies that can significantly reduce your risk, and provide essential, life-saving advice on what to do in a stroke emergency. By empowering you with this vital knowledge, Health & Wellness Insights aims to contribute to better brain health and ultimately, save lives.
+                </p>
+                
+                <!-- Table of Contents -->
+                <div class="bg-blue-50 p-6 rounded-lg mb-8">
+                    <h2 class="text-xl font-bold text-gray-800 mb-4">Table of Contents</h2>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li><a href="#introduction" class="text-blue-600 hover:text-blue-800">Introduction: Understanding the Brain Attack</a></li>
+                        <li><a href="#what-is-stroke" class="text-blue-600 hover:text-blue-800">What is a Stroke? Types and Pathophysiology</a>
+                            <ul class="list-circle pl-5 mt-1">
+                                <li><a href="#ischemic-stroke" class="text-blue-500 hover:text-blue-700">Ischemic Stroke</a></li>
+                                <li><a href="#hemorrhagic-stroke" class="text-blue-500 hover:text-blue-700">Hemorrhagic Stroke</a></li>
+                                <li><a href="#tia" class="text-blue-500 hover:text-blue-700">Transient Ischemic Attack (TIA)</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#symptoms-signs" class="text-blue-600 hover:text-blue-800">Symptoms and Warning Signs: Act FAST</a></li>
+                        <li><a href="#causes-risk-factors" class="text-blue-600 hover:text-blue-800">Causes and Risk Factors: Identifying Vulnerabilities</a>
+                            <ul class="list-circle pl-5 mt-1">
+                                <li><a href="#controllable-risk" class="text-blue-500 hover:text-blue-700">Controllable Risk Factors</a></li>
+                                <li><a href="#uncontrollable-risk" class="text-blue-500 hover:text-blue-700">Uncontrollable Risk Factors</a></li>
+                                <li><a href="#other-risk" class="text-blue-500 hover:text-blue-700">Other and Emerging Risk Factors</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#prevention" class="text-blue-600 hover:text-blue-800">Stroke Prevention Strategies: Protecting Your Brain</a>
+                            <ul class="list-circle pl-5 mt-1">
+                                <li><a href="#diet" class="text-blue-500 hover:text-blue-700">Healthy Eating Habits</a></li>
+                                <li><a href="#exercise" class="text-blue-500 hover:text-blue-700">Regular Physical Activity</a></li>
+                                <li><a href="#weight-management" class="text-blue-500 hover:text-blue-700">Maintaining a Healthy Weight</a></li>
+                                <li><a href="#smoking-cessation" class="text-blue-500 hover:text-blue-700">Smoking Cessation</a></li>
+                                <li><a href="#medical-management" class="text-blue-500 hover:text-blue-700">Managing Chronic Medical Conditions</a></li>
+                                <li><a href="#alcohol-moderation" class="text-blue-500 hover:text-blue-700">Moderate Alcohol Consumption</a></li>
+                                <li><a href="#stress-sleep" class="text-blue-500 hover:text-blue-700">Stress Management and Quality Sleep</a></li>
+                                <li><a href="#regular-checkups" class="text-blue-500 hover:text-blue-700">Regular Medical Check-ups</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#emergency-response" class="text-blue-600 hover:text-blue-800">What to Do in a Stroke Emergency: Act FAST</a></li>
+                        <li><a href="#recovery" class="text-blue-600 hover:text-blue-800">Recovery and Rehabilitation: Life After Stroke</a></li>
+                        <li><a href="#conclusion" class="text-blue-600 hover:text-blue-800">Conclusion: Empowering Yourself Against Stroke</a></li>
+                    </ul>
+                </div>
+                
+                <div class="important-note mb-6">
+                    <h3 class="text-xl font-bold text-red-700 mb-2">⚠️ Disclaimer: Essential Health Information</h3>
+                    <p class="text-gray-800">
+                        This article provides general information and is not a substitute for professional medical advice. Always consult with a qualified healthcare provider for diagnosis, treatment, and medical decisions specific to your health condition. If you suspect a stroke, call emergency services immediately.
+                    </p>
+                </div>
+
+                <!-- Google AdSense Ad -->
+                <div class="ad-container mb-8">
+                    <p class="text-xs text-gray-500 mb-2">Advertisement</p>
+                    <div class="h-64 bg-gray-100 flex items-center justify-center rounded">
+                        <p class="text-gray-500">Google AdSense Banner Ad Placeholder</p>
+                    </div>
+                </div>
+                
+                <!-- Section: Introduction -->
+                <section id="introduction" class="mb-10">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4">Introduction: Understanding the Brain Attack</h2>
+                    <p class="text-gray-700 mb-4">
+                        A stroke is a medical emergency that demands immediate attention. Every minute counts when someone is having a stroke, as timely intervention can significantly reduce brain damage and potential long-term disability. Globally, stroke is the second leading cause of death and a major cause of disability, particularly among adults. The consequences can range from minor weakness to severe paralysis, speech difficulties, cognitive impairment, and even death. Despite its severity, a significant percentage of strokes are preventable through lifestyle modifications and careful management of underlying health conditions.
+                    </p>
+                    
+                    <div class="bg-blue-50 p-6 rounded-lg mb-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">The Impact of Stroke</h3>
+                        <p class="text-gray-700 mb-4">
+                            Stroke can affect anyone, regardless of age, though the risk increases with advancing years. It can disrupt various bodily functions depending on which part of the brain is affected. This includes movement, sensation, communication, thinking, and emotional regulation. The sudden onset of these impairments can be terrifying and profoundly life-altering for both the individual and their families.
+                        </p>
+                        <p class="text-gray-700">
+                            Understanding the mechanisms of stroke, recognizing its signs, and knowing how to respond quickly are crucial steps in mitigating its devastating effects and promoting better neurological health for all.
+                        </p>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-100">
+                            <h4 class="font-bold text-gray-800 mb-2">Global Impact</h4>
+                            <p class="text-gray-700 text-sm">
+                                Around 15 million people worldwide suffer a stroke each year. Of these, 5 million die and another 5 million are permanently disabled, according to the World Stroke Organization.
+                            </p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-100">
+                            <h4 class="font-bold text-gray-800 mb-2">Time is Brain</h4>
+                            <p class="text-gray-700 text-sm">
+                                During an ischemic stroke, approximately 1.9 million brain cells are lost each minute, emphasizing why rapid treatment is so vital.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Section: What is a Stroke? -->
+                <section id="what-is-stroke" class="mb-10">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4">What is a Stroke? Types and Pathophysiology</h2>
+                    <p class="text-gray-700 mb-6">
+                        A stroke occurs when something interrupts the blood flow to your brain. Without blood, brain cells begin to die because they are deprived of oxygen and essential nutrients. There are primarily two types of stroke, each with distinct causes and mechanisms.
+                    </p>
+
+                    <h3 id="ischemic-stroke" class="text-xl font-bold text-blue-700 mb-3">Ischemic Stroke: The Blockage</h3>
+                    <p class="text-gray-700 mb-4">
+                        An ischemic stroke, accounting for about 87% of all strokes, happens when a blood vessel supplying blood to the brain becomes blocked. This blockage is typically caused by a blood clot.
+                    </p>
+                    <ul class="list-disc pl-6 mb-4 space-y-2 text-gray-700">
+                        <li><strong>Thrombotic Stroke:</strong> This occurs when a blood clot (thrombus) forms in an artery supplying blood to the brain, blocking blood flow. These clots usually form in arteries damaged by atherosclerosis, a condition where plaque builds up in the arteries, narrowing them.</li>
+                        <li><strong>Embolic Stroke:</strong> This happens when a blood clot or other debris (an embolus) forms away from the brain, often in the heart, and travels through the bloodstream to lodge in a narrower brain artery, blocking blood flow. Atrial fibrillation (irregular heartbeat) is a common cause of embolic strokes.</li>
+                    </ul>
+
+                    <h3 id="hemorrhagic-stroke" class="text-xl font-bold text-blue-700 mb-3">Hemorrhagic Stroke: The Bleed</h3>
+                    <p class="text-gray-700 mb-4">
+                        A hemorrhagic stroke occurs when a blood vessel in the brain leaks or ruptures, causing bleeding into or around the brain tissue. This bleeding damages brain cells in two ways: by depriving the affected area of oxygenated blood and by the pressure exerted on brain tissue from the accumulating blood.
+                    </p>
+                    <ul class="list-disc pl-6 mb-4 space-y-2 text-gray-700">
+                        <li><strong>Intracerebral Hemorrhage:</strong> This is the most common type of hemorrhagic stroke, where a blood vessel ruptures within the brain tissue itself. High blood pressure is the most frequent cause, leading to weakened arteries that can eventually burst.</li>
+                        <li><strong>Subarachnoid Hemorrhage:</strong> This involves bleeding in the space between the brain and the membranes that cover it (the subarachnoid space). It often results from the rupture of an aneurysm (a balloon-like bulge in an artery) or an arteriovenous malformation (AVM), an abnormal tangle of blood vessels.</li>
+                    </ul>
+
+                    <h3 id="tia" class="text-xl font-bold text-blue-700 mb-3">Transient Ischemic Attack (TIA): The Warning Sign (Mini-Stroke)</h3>
+                    <p class="text-gray-700 mb-4">
+                        A Transient Ischemic Attack (TIA), sometimes called a "mini-stroke," is caused by a temporary disruption of blood flow to the brain. Unlike a stroke, TIA symptoms last only a few minutes and typically resolve within 24 hours, leaving no permanent damage. However, a TIA is a critical warning sign that you are at high risk for a full-blown stroke, often within hours or days.
+                    </p>
+                    <ul class="list-disc pl-6 mb-6 space-y-2 text-gray-700">
+                        <li><strong>Temporary Blockage:</strong> TIAs are usually caused by a temporary blood clot or debris that briefly blocks blood flow to the brain before dissolving or moving on.</li>
+                        <li><strong>Urgent Evaluation:</strong> Even if symptoms disappear, a TIA requires immediate medical evaluation to identify the cause and implement preventative measures against a future, more serious stroke.</li>
+                    </ul>
+                </section>
+                
+                <!-- Google AdSense Ad -->
+                <div class="ad-container mb-8">
+                    <p class="text-xs text-gray-500 mb-2">Advertisement</p>
+                    <div class="h-64 bg-gray-100 flex items-center justify-center rounded">
+                        <p class="text-gray-500">Google AdSense Rectangle Ad Placeholder</p>
+                    </div>
+                </div>
+                
+                <!-- Section: Symptoms and Warning Signs -->
+                <section id="symptoms-signs" class="mb-10">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4">Symptoms and Warning Signs: Act FAST</h2>
+                    <p class="text-gray-700 mb-6">
+                        Recognizing the symptoms of a stroke is paramount for getting timely medical help, which can significantly reduce brain damage and disability. Stroke symptoms often appear suddenly. Remember the acronym **FAST** to identify a stroke and act quickly:
+                    </p>
+                    
+                    <div class="important-note mb-6">
+                        <h3 class="text-xl font-bold text-red-700 mb-2">🚨 Act FAST: Every Second Counts!</h3>
+                        <p class="text-gray-800 font-bold">
+                            If you or someone you know experiences any of these signs, even if they are fleeting, call emergency services immediately. Do NOT wait.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-blue-100 p-6 rounded-lg mb-6">
+                        <h4 class="font-bold text-lg text-gray-800 mb-3">The FAST Acronym Explained:</h4>
+                        <ul class="list-none space-y-3 text-gray-700">
+                            <li><strong><span class="text-red-600 font-bold">F</span>ace Drooping:</strong> Ask the person to smile. Does one side of the face droop or is it numb? Is the smile uneven?</li>
+                            <li><strong><span class="text-red-600 font-bold">A</span>rm Weakness:</strong> Ask the person to raise both arms. Does one arm drift downward? Is one arm weak or numb?</li>
+                            <li><strong><span class="text-red-600 font-bold">S</span>peech Difficulty:</strong> Ask the person to repeat a simple sentence. Is their speech slurred, strange, or difficult to understand? Are they unable to speak?</li>
+                            <li><strong><span class="text-red-600 font-bold">T</span>ime to Call Emergency:</strong> If anyone shows any of these symptoms, even if the symptoms go away, call emergency medical services immediately. Note the time when symptoms first appeared.</li>
+                        </ul>
+                    </div>
+                    
+                    <h3 class="text-xl font-bold text-blue-700 mb-3">Other Common Stroke Symptoms:</h3>
+                    <ul class="list-disc pl-6 mb-6 space-y-2 text-gray-700">
+                        <li><strong>Sudden Numbness or Weakness:</strong> Especially on one side of the body (face, arm, or leg).</li>
+                        <li><strong>Sudden Confusion:</strong> Trouble understanding speech.</li>
+                        <li><strong>Sudden Trouble Seeing:</strong> In one or both eyes, or sudden blurred vision.</li>
+                        <li><strong>Sudden Trouble Walking:</strong> Dizziness, loss of balance or coordination, or sudden difficulty with gait.</li>
+                        <li><strong>Sudden, Severe Headache:</strong> A "thunderclap" headache with no known cause, especially with nausea or vomiting, which can be a sign of hemorrhagic stroke.</li>
+                    </ul>
+                    <p class="text-gray-700 mb-4">
+                        It's important to remember that symptoms can vary. Women, for example, may experience more general and non-specific symptoms such as sudden general weakness, fatigue, nausea or vomiting, and even hiccups, in addition to the classic FAST symptoms. Never dismiss these signs, as early recognition is key to effective treatment.
+                    </p>
+                </section>
+                
+                <!-- Google AdSense Ad -->
+                <div class="ad-container mb-8">
+                    <p class="text-xs text-gray-500 mb-2">Advertisement</p>
+                    <div class="h-64 bg-gray-100 flex items-center justify-center rounded">
+                        <p class="text-gray-500">Google AdSense In-Article Ad Placeholder</p>
+                    </div>
+                </div>
+                
+                <!-- Section: Causes and Risk Factors -->
+                <section id="causes-risk-factors" class="mb-10">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4">Causes and Risk Factors: Identifying Vulnerabilities</h2>
+                    <p class="text-gray-700 mb-6">
+                        A stroke occurs when blood flow to the brain is disrupted. This disruption is almost always linked to underlying medical conditions and lifestyle choices that damage blood vessels. Understanding these causes and risk factors is the cornerstone of stroke prevention. Some factors are within your control, while others are not, though even uncontrollable factors can be mitigated.
+                    </p>
+                    
+                    <h3 id="controllable-risk" class="text-xl font-bold text-blue-700 mb-3">Controllable Risk Factors (Manageable with Lifestyle and Medical Intervention)</h3>
+                    <p class="text-gray-700 mb-4">
+                        These are the factors you can actively work to change or manage to significantly reduce your stroke risk.
+                    </p>
+                    <ul class="list-disc pl-6 mb-4 space-y-2 text-gray-700">
+                        <li><strong>High Blood Pressure (Hypertension):</strong> The most significant risk factor for both ischemic and hemorrhagic strokes. Chronic high pressure damages blood vessel walls, making them more prone to plaque buildup (atherosclerosis) and rupture. Aim for blood pressure below 120/80 mm Hg.</li>
+                        <li><strong>High Cholesterol:</strong> High levels of LDL ("bad") cholesterol contribute to plaque formation in arteries (atherosclerosis), narrowing them and increasing the risk of clots.</li>
+                        <li><strong>Diabetes:</strong> Poorly controlled diabetes damages blood vessels throughout the body, including the brain, increasing the risk of both ischemic and hemorrhagic strokes. High blood sugar contributes to inflammation and atherosclerosis.</li>
+                        <li><strong>Smoking:</strong> Doubles the risk of ischemic stroke and significantly increases the risk of hemorrhagic stroke. Nicotine raises blood pressure, carbon monoxide reduces oxygen in the blood, and chemicals in smoke damage blood vessel linings, promoting clot formation.</li>
+                        <li><strong>Obesity:</strong> Linked to other stroke risk factors like high blood pressure, high cholesterol, and diabetes. Excess weight strains the cardiovascular system.</li>
+                        <li><strong>Physical Inactivity:</strong> A sedentary lifestyle contributes to obesity, high blood pressure, diabetes, and high cholesterol. Regular exercise helps improve all these conditions.</li>
+                        <li><strong>Unhealthy Diet:</strong> Diets high in saturated and trans fats, cholesterol, sodium, and added sugars contribute to high blood pressure, high cholesterol, and obesity. A diet rich in fruits, vegetables, whole grains, and lean proteins is protective.</li>
+                        <li><strong>Heavy Alcohol Consumption:</strong> Binge drinking or chronic heavy alcohol use can raise blood pressure, contribute to atrial fibrillation, and weaken blood vessels, increasing stroke risk.</li>
+                        <li><strong>Atrial Fibrillation (AFib):</strong> An irregular and often rapid heart rate that can cause blood to pool in the heart's upper chambers and form clots. If a clot breaks off and travels to the brain, it can cause an embolic stroke. AFib increases stroke risk by four to five times.</li>
+                        <li><strong>Carotid Artery Disease:</strong> The carotid arteries in the neck supply blood to the brain. Plaque buildup in these arteries (carotid stenosis) can narrow them, leading to clots that travel to the brain.</li>
+                        <li><strong>Sleep Apnea:</strong> A condition where breathing repeatedly stops and starts during sleep. This causes drops in blood oxygen levels and increases blood pressure, straining the cardiovascular system and increasing stroke risk.</li>
+                    </ul>
+                    
+                    <h3 id="uncontrollable-risk" class="text-xl font-bold text-blue-700 mb-3">Uncontrollable Risk Factors (Cannot be Changed, but Awareness is Key)</h3>
+                    <p class="text-gray-700 mb-4">
+                        While these factors cannot be altered, knowing them helps in assessing your overall risk and implementing more aggressive preventative measures for controllable factors.
+                    </p>
+                    <ul class="list-disc pl-6 mb-4 space-y-2 text-gray-700">
+                        <li><strong>Age:</strong> The risk of stroke increases significantly with age. For every decade after age 55, the risk of stroke doubles.</li>
+                        <li><strong>Family History:</strong> Having a close relative (parent, grandparent, sibling) who had a stroke or heart attack at an early age (before 65) increases your own risk. This suggests a genetic predisposition to atherosclerosis or other cardiovascular issues.</li>
+                        <li><strong>Race/Ethnicity:</strong> African Americans have a higher risk of stroke and stroke-related death than Caucasians, partly due to higher rates of high blood pressure, diabetes, and sickle cell disease. Hispanic/Latino individuals and some Asian populations also have unique risk profiles.</li>
+                        <li><strong>Gender:</strong> Historically, men have a slightly higher risk of stroke at younger ages. However, women's stroke risk increases significantly after menopause, and women tend to have strokes later in life and are more likely to die from them. Pregnancy and hormone therapy can also affect women's risk.</li>
+                        <li><strong>Previous Stroke or TIA:</strong> Having a prior stroke or TIA significantly increases the risk of another stroke. A TIA is a strong warning sign, with up to 15% of people experiencing a stroke within three months of a TIA.</li>
+                    </ul>
+
+                    <h3 id="other-risk" class="text-xl font-bold text-blue-700 mb-3">Other and Emerging Risk Factors</h3>
+                    <ul class="list-disc pl-6 mb-6 space-y-2 text-gray-700">
+                        <li><strong>Certain Blood Disorders:</strong> Conditions like sickle cell anemia can cause blood cells to clump and block blood vessels in the brain.</li>
+                        <li><strong>Preeclampsia:</strong> A pregnancy complication characterized by high blood pressure and organ damage. Women with a history of preeclampsia have a higher lifelong risk of stroke.</li>
+                        <li><strong>Patent Foramen Ovale (PFO) and Atrial Septal Aneurysm (ASA):</strong> Structural heart defects that can allow blood clots to pass from the right to the left side of the heart and travel to the brain.</li>
+                        <li><strong>Inflammatory Conditions:</strong> Chronic inflammatory diseases such as lupus or rheumatoid arthritis can contribute to blood vessel damage and increase stroke risk.</li>
+                        <li><strong>Migraine with Aura:</strong> Women, particularly those under 45, who experience migraine with aura (visual disturbances or other sensory changes before a migraine headache) may have a slightly increased risk of ischemic stroke.</li>
+                    </ul>
+                </section>
+                
+                <!-- Google AdSense Ad -->
+                <div class="ad-container mb-8">
+                    <p class="text-xs text-gray-500 mb-2">Advertisement</p>
+                    <div class="h-64 bg-gray-100 flex items-center justify-center rounded">
+                        <p class="text-gray-500">Google AdSense In-Article Ad Placeholder</p>
+                    </div>
+                </div>
+                
+                <!-- Section: Prevention Strategies -->
+                <section id="prevention" class="mb-10">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4">Stroke Prevention Strategies: Protecting Your Brain</h2>
+                    <p class="text-gray-700 mb-6">
+                        The most encouraging news about stroke is that a large majority of cases – up to 80% of premature strokes – are preventable. By addressing controllable risk factors through a combination of lifestyle changes and, when necessary, medical management, you can significantly reduce your risk and protect your brain health. Prevention is an ongoing commitment to well-being.
+                    </p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                        <div id="diet" class="prevention-tip prevention-tip-card">
+                            <div class="text-3xl text-blue-600 mb-3">🥗</div>
+                            <h3 class="text-lg font-bold text-gray-800 mb-2">1. Healthy Eating Habits</h3>
+                            <p class="text-gray-700 text-sm">
+                                Adopt a diet rich in fruits, vegetables, whole grains, and lean proteins (fish, poultry, legumes). Limit saturated and trans fats, cholesterol, sodium, and added sugars. Diets like the Mediterranean or DASH (Dietary Approaches to Stop Hypertension) are highly recommended. This helps manage blood pressure, cholesterol, and weight.
+                            </p>
+                        </div>
+                        
+                        <div id="exercise" class="prevention-tip prevention-tip-card">
+                            <div class="text-3xl text-blue-600 mb-3">🏃‍♂️</div>
+                            <h3 class="text-lg font-bold text-gray-800 mb-2">2. Regular Physical Activity</h3>
+                            <p class="text-gray-700 text-sm">
+                                Aim for at least 150 minutes of moderate-intensity aerobic activity (e.g., brisk walking, swimming, cycling) or 75 minutes of vigorous-intensity activity per week, along with muscle-strengthening activities twice a week. Exercise helps lower blood pressure, improve cholesterol levels, manage weight, and enhance overall cardiovascular health.
+                            </p>
+                        </div>
+                        
+                        <div id="weight-management" class="prevention-tip prevention-tip-card">
+                            <div class="text-3xl text-blue-600 mb-3">⚖️</div>
+                            <h3 class="text-lg font-bold text-gray-800 mb-2">3. Maintaining a Healthy Weight</h3>
+                            <p class="text-gray-700 text-sm">
+                                Achieve and maintain a healthy Body Mass Index (BMI) (18.5 to 24.9 kg/m²) and waist circumference (less than 35 inches for women, 40 inches for men). Excess weight, particularly around the abdomen, is strongly linked to high blood pressure, diabetes, and high cholesterol—all major stroke risk factors.
+                            </p>
+                        </div>
+                        
+                        <div id="smoking-cessation" class="prevention-tip prevention-tip-card">
+                            <div class="text-3xl text-blue-600 mb-3">🚭</div>
+                            <h3 class="text-lg font-bold text-gray-800 mb-2">4. Smoking Cessation</h3>
+                            <p class="text-gray-700 text-sm">
+                                Quitting smoking is one of the single most impactful steps you can take. Your stroke risk begins to decrease almost immediately and can drop to that of a non-smoker within 5-15 years. Seek support from healthcare professionals or cessation programs.
+                            </p>
+                        </div>
+                        
+                        <div id="medical-management" class="prevention-tip prevention-tip-card">
+                            <div class="text-3xl text-blue-600 mb-3">💊</div>
+                            <h3 class="text-lg font-bold text-gray-800 mb-2">5. Managing Chronic Medical Conditions</h3>
+                            <p class="text-gray-700 text-sm">
+                                Work closely with your doctor to effectively manage conditions like high blood pressure, high cholesterol, diabetes, and atrial fibrillation. This often involves a combination of lifestyle changes and prescribed medications (e.g., anti-hypertensives, statins, blood thinners). Consistent adherence to treatment plans is vital.
+                            </p>
+                        </div>
+                        
+                        <div id="alcohol-moderation" class="prevention-tip prevention-tip-card">
+                            <div class="text-3xl text-blue-600 mb-3">🥂</div>
+                            <h3 class="text-lg font-bold text-gray-800 mb-2">6. Moderate Alcohol Consumption</h3>
+                            <p class="text-gray-700 text-sm">
+                                If you drink alcohol, do so in moderation. This means up to one drink per day for women and up to two drinks per day for men. Excessive alcohol intake can raise blood pressure and contribute to atrial fibrillation, both increasing stroke risk.
+                            </p>
+                        </div>
+
+                        <div id="stress-sleep" class="prevention-tip prevention-tip-card">
+                            <div class="text-3xl text-blue-600 mb-3">😌</div>
+                            <h3 class="text-lg font-bold text-gray-800 mb-2">7. Stress Management and Quality Sleep</h3>
+                            <p class="text-gray-700 text-sm">
+                                Chronic stress can elevate blood pressure and lead to unhealthy coping mechanisms. Practice stress-reduction techniques like meditation, yoga, mindfulness, or engaging in hobbies. Ensure you get 7-9 hours of quality sleep per night; sleep disorders like apnea should be diagnosed and treated.
+                            </p>
+                        </div>
+
+                        <div id="regular-checkups" class="prevention-tip prevention-tip-card">
+                            <div class="text-3xl text-blue-600 mb-3">📅</div>
+                            <h3 class="text-lg font-bold text-gray-800 mb-2">8. Regular Medical Check-ups</h3>
+                            <p class="text-gray-700 text-sm">
+                                Schedule routine visits with your healthcare provider. These check-ups are essential for monitoring your blood pressure, cholesterol, blood sugar, and identifying any emerging risk factors. Early detection and intervention are key to effective prevention.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-green-50 p-6 rounded-lg">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Key Metrics for Stroke Prevention</h3>
+                        <p class="text-gray-700 mb-4">
+                            Work with your doctor to keep these five numbers in a healthy range to significantly reduce your stroke risk:
+                        </p>
+                        <ol class="list-decimal pl-5 space-y-2 text-gray-700">
+                            <li><strong>Blood Pressure:</strong> Less than 120/80 mm Hg</li>
+                            <li><strong>Total Cholesterol:</strong> Less than 200 mg/dL (LDL < 100 mg/dL, HDL > 40 mg/dL for men, > 50 mg/dL for women)</li>
+                            <li><strong>Fasting Blood Sugar:</strong> Less than 100 mg/dL (5.6 mmol/L)</li>
+                            <li><strong>Body Mass Index (BMI):</strong> 18.5 to 24.9 kg/m²</li>
+                            <li><strong>Waist Circumference:</strong> Less than 35 inches (88 cm) for women, 40 inches (102 cm) for men</li>
+                        </ol>
+                    </div>
+                </section>
+                
+                <!-- Google AdSense Ad -->
+                <div class="ad-container mb-8">
+                    <p class="text-xs text-gray-500 mb-2">Advertisement</p>
+                    <div class="h-64 bg-gray-100 flex items-center justify-center rounded">
+                        <p class="text-gray-500">Google AdSense In-Article Ad Placeholder</p>
+                    </div>
+                </div>
+                
+                <!-- Section: Emergency Response for Stroke -->
+                <section id="emergency-response" class="mb-10">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4">What to Do in a Stroke Emergency: Act FAST</h2>
+                    
+                    <div class="important-note mb-6">
+                        <h3 class="text-xl font-bold text-red-700 mb-2">🚨 Call Emergency Services Immediately!</h3>
+                        <p class="text-gray-800 font-bold">
+                            If you suspect a stroke in yourself or someone else, every second is crucial. Do NOT hesitate. Call your local emergency number (e.g., 911 in the US, 112 in Europe, 999 in UK, 108 in India) right away.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow-sm mb-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Step-by-Step Emergency Response for Stroke</h3>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="bg-red-600 text-white rounded-full h-8 w-8 flex items-center justify-center flex-shrink-0 mr-4">1</div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">Call Emergency Services Immediately</h4>
+                                    <p class="text-gray-700">
+                                        Do not drive the person to the hospital yourself. Paramedics can begin life-saving treatment on the way and alert the hospital, allowing a stroke team to be ready upon arrival.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-red-600 text-white rounded-full h-8 w-8 flex items-center justify-center flex-shrink-0 mr-4">2</div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">Note the Time of Symptom Onset</h4>
+                                    <p class="text-gray-700">
+                                        This is critically important information for doctors, as certain clot-busting medications (like tPA) are only effective if administered within a narrow time window from symptom onset.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-red-600 text-white rounded-full h-8 w-8 flex items-center justify-center flex-shrink-0 mr-4">3</div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">Keep the Person Comfortable and Safe</h4>
+                                    <p class="text-gray-700">
+                                        Loosen tight clothing. If the person is unconscious, lay them on their side to prevent choking if they vomit. Do not give them anything to eat or drink.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-red-600 text-white rounded-full h-8 w-8 flex items-center justify-center flex-shrink-0 mr-4">4</div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">Perform CPR if Necessary</h4>
+                                    <p class="text-gray-700">
+                                        If the person stops breathing and has no pulse, begin CPR (hands-only chest compressions) if you are trained, and continue until emergency medical personnel take over.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-blue-100 p-6 rounded-lg">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Importance of Rapid Treatment</h3>
+                        <p class="text-gray-700 mb-4">
+                            For ischemic strokes, treatments like **tissue plasminogen activator (tPA)**, a clot-busting drug, can significantly reduce long-term disability, but must be given within 4.5 hours of symptom onset. In some cases, mechanical **thrombectomy** (surgically removing the clot) can be performed up to 24 hours in certain patients. The faster these treatments are administered, the better the chances of a positive outcome.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- Section: Recovery and Rehabilitation -->
+                <section id="recovery" class="mb-10">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4">Recovery and Rehabilitation: Life After Stroke</h2>
+                    <p class="text-gray-700 mb-6">
+                        Recovery from a stroke is a challenging but often rewarding journey. The brain's remarkable ability to reorganize itself (neuroplasticity) means that with dedicated rehabilitation, many functions can be regained. The extent of recovery varies greatly depending on the stroke's severity, location, and the individual's commitment to therapy.
+                    </p>
+                    <ul class="list-disc pl-6 mb-4 space-y-2 text-gray-700">
+                        <li><strong>Early Rehabilitation:</strong> Often begins in the hospital shortly after the stroke. The goal is to prevent complications, maintain strength, and start re-learning basic skills.</li>
+                        <li><strong>Rehabilitation Team:</strong> A multidisciplinary team may include physical therapists (for movement and balance), occupational therapists (for daily living activities), speech-language pathologists (for communication and swallowing), neurologists, nurses, and social workers.</li>
+                        <li><strong>Types of Therapy:</strong>
+                            <ul class="list-circle pl-6 mt-2 mb-2 space-y-1">
+                                <li><strong>Physical Therapy:</strong> Focuses on restoring strength, coordination, balance, and mobility.</li>
+                                <li><strong>Occupational Therapy:</strong> Helps relearn daily tasks such as eating, dressing, bathing, and performing work-related activities.</li>
+                                <li><strong>Speech and Language Therapy:</strong> Addresses speech, language, and swallowing difficulties (dysphagia).</li>
+                                <li><strong>Cognitive Therapy:</strong> Helps with memory, problem-solving, and attention deficits.</li>
+                                <li><strong>Psychological Support:</strong> Addresses depression, anxiety, and emotional changes common after stroke.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Long-Term Recovery:</strong> Recovery can continue for months or even years. Persistence and a strong support system are crucial. Many stroke survivors return to a good quality of life with adaptations and ongoing therapy.</li>
+                        <li><strong>Secondary Prevention:</strong> After a stroke, rigorous management of risk factors (blood pressure, cholesterol, diabetes, antiplatelet/anticoagulant therapy) is essential to prevent recurrent strokes.</li>
+                    </ul>
+                </section>
+                
+                <!-- Conclusion Section -->
+                <section id="conclusion">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4">Conclusion: Empowering Yourself Against Stroke</h2>
+                    <p class="text-gray-700 mb-6">
+                        Stroke is a formidable adversary, but it is not invincible. This comprehensive guide has explored the critical aspects of stroke, from its varied causes and devastating complications to the life-saving importance of recognizing its symptoms and acting immediately. We've highlighted that understanding the different types of stroke—ischemic, hemorrhagic, and TIA—is the first step toward informed action.
+                    </p>
+                    <p class="text-gray-700 mb-6">
+                        The overwhelming message in stroke management is one of empowerment through prevention and rapid response. By embracing a proactive approach to your health, through consistent lifestyle choices like a balanced diet, regular physical activity, and effective management of chronic conditions, you can dramatically reduce your risk. Equally vital is the ability to **Act FAST** at the first sign of stroke symptoms, knowing that "time is brain" and immediate medical attention can save lives and preserve brain function.
+                    </p>
+                    <p class="text-gray-700 mb-6">
+                        Life after a stroke, while challenging, is also a testament to human resilience, with dedicated rehabilitation offering pathways to regain function and quality of life. The journey toward better brain health is a continuous one. Health & Wellness Insights encourages you to take this knowledge, apply it to your life, and share it with those you care about. Consult your healthcare provider for personalized advice and screenings. Together, we can turn the tide against stroke and foster a healthier, more resilient future.
+                    </p>
+                </section>
+            </div>
+        </article>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-6 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-sm">&copy; 2025 Health & Wellness Insights. All rights reserved.</p>
+            <p class="text-sm mt-1">
+                <a href="#" class="hover:text-blue-300">Privacy Policy</a> |
+                <a href="#" class="hover:text-blue-300">Terms of Service</a> |
+                <a href="#" class="hover:text-blue-300">About Us</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Loading Animation and Mobile Menu -->
+    <script>
+        window.addEventListener('load', () => {
+            const loadingScreen = document.getElementById('loading');
+            if (loadingScreen) {
+                loadingScreen.style.opacity = '0';
+                setTimeout(() => {
+                    loadingScreen.style.display = 'none';
+                }, 500); // Wait for the fade-out transition to complete
+            }
+        });
+
+        document.getElementById('mobile-menu-button').addEventListener('click', () => {
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (mobileMenu) {
+                mobileMenu.classList.toggle('hidden');
+            }
+        });
+
+        // Smooth scroll for table of contents
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 70, // Adjust for fixed header height
+                        behavior: 'smooth'
+                    });
+                     // Close mobile menu after clicking a link
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

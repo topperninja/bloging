@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atrial Fibrillation: The Silent Heart Condition You Need to Know | Topper Ninja</title>
+    <meta name="description" content="Discover the hidden dangers of atrial fibrillation (AFib), the common heart condition many don't know they have. Learn about symptoms, risks, and prevention strategies.">
+    <meta name="keywords" content="atrial fibrillation, AFib, irregular heartbeat, heart palpitations, silent heart condition, stroke risk, heart health">
+    <meta name="author" content="Topper Ninja">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🥷</text></svg>">
+    
+    <style>
+        /* Custom styles */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        :root {
+            --primary-blue: #3498db;
+            --light-blue: #e1f5fe;
+            --dark-blue: #0277bd;
+            --heart-red: #ff5252;
+            --heart-light: #ffebee;
+            --afib-purple: #9c27b0;
+            --afib-light: #f3e5f5;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        /* Ninja loading animation */
+        #loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease-out;
+        }
+        
+        .ninja-icon {
+            width: 80px;
+            height: 80px;
+            position: relative;
+            animation: spin 1.5s linear infinite;
+        }
+        
+        .ninja-icon::before {
+            content: "🥷";
+            font-size: 80px;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        /* Heart rhythm animation */
+        @keyframes heartRhythm {
+          0% { transform: scale(1); }
+          15% { transform: scale(1.1); }
+          30% { transform: scale(0.95); }
+          45% { transform: scale(1.05); }
+          60% { transform: scale(0.98); }
+          75% { transform: scale(1.02); }
+          100% { transform: scale(1); }
+        }
+        
+        .heart-rhythm {
+          animation: heartRhythm 2s infinite;
+          color: var(--afib-purple);
+        }
+        
+        /* Custom button styles */
+        .btn-primary {
+            background-color: var(--primary-blue);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--dark-blue);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Card hover effects */
+        .blog-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Styling for important notes */
+        .important-note {
+            border-left: 4px solid var(--afib-purple);
+            background-color: var(--afib-light);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        /* Styling for prevention tips */
+        .prevention-tip {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            margin-bottom: 1rem;
+            border-top: 4px solid var(--primary-blue);
+        }
+        
+        /* Content section styling */
+        .content-section {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 2rem;
+        }
+        
+        /* Ad container styling */
+        .ad-container {
+            background: #f9f9f9;
+            border: 1px dashed #ddd;
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+            margin: 2rem 0;
+        }
+        
+        /* ECG line animation */
+        .ecg-line {
+            height: 4px;
+            background: linear-gradient(90deg, var(--afib-purple) 0%, transparent 10%, transparent 90%, var(--afib-purple) 100%);
+            background-size: 200% 100%;
+            animation: ecgMove 3s linear infinite;
+        }
+        
+        @keyframes ecgMove {
+            0% { background-position: 100% 0; }
+            100% { background-position: -100% 0; }
+        }
+    </style>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.topperninja.com/atrial-fibrillation-silent-heart-condition"
+      },
+      "headline": "Atrial Fibrillation: The Silent Heart Condition You Need to Know",
+      "description": "Discover the hidden dangers of atrial fibrillation (AFib), the common heart condition many don't know they have. Learn about symptoms, risks, and prevention strategies.",
+      "image": "https://www.topperninja.com/images/afib-heart-health.jpg",
+      "author": {
+        "@type": "Person",
+        "name": "Dr. Michael Chen"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Topper Ninja",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.topperninja.com/logo.png"
+        }
+      },
+      "datePublished": "2023-06-15",
+      "dateModified": "2023-06-15"
+    }
+    </script>
+</head>
+<body class="bg-blue-50">
+    <div id="loading">
+        <div class="ninja-icon"></div>
+    </div>
+
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-2">
+                <span class="text-3xl">🥷</span>
+                <span class="text-2xl font-bold text-blue-600">Topper Ninja</span>
+            </a>
+            
+            <button id="mobile-menu-button" class="md:hidden text-blue-600">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+            
+            <nav class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-gray-600 hover:text-blue-600 font-medium">Home</a>
+                <a href="index.html#about" class="text-gray-600 hover:text-blue-600 font-medium">About</a>
+                <a href="index.html#categories" class="text-gray-600 hover:text-blue-600 font-medium">Categories</a>
+                <a href="index.html#latest" class="text-gray-600 hover:text-blue-600 font-medium">Latest Posts</a>
+            </nav>
+        </div>
+        
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-4 px-4">
+            <a href="index.html" class="block py-2 text-blue-600 font-medium">Home</a>
+            <a href="index.html#about" class="block py-2 text-gray-600 hover:text-blue-600">About</a>
+            <a href="index.html#categories" class="block py-2 text-gray-600 hover:text-blue-600">Categories</a>
+            <a href="index.html#latest" class="block py-2 text-gray-600 hover:text-blue-600">Latest Posts</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+        <nav class="text-sm text-gray-600 mb-8">
+            <a href="index.html" class="hover:text-blue-600">Home</a> > 
+            <a href="index.html#categories" class="hover:text-blue-600">Health</a> > 
+            <span class="text-gray-800">Heart Conditions</span>
+        </nav>
+        
+        <article class="content-section mb-8">
+            <div class="flex justify-between items-center mb-4">
+                <div class="flex items-center text-sm text-gray-500">
+                    <span>Health</span>
+                    <span class="mx-2">•</span>
+                    <span>June 15, 2023</span>
+                    <span class="mx-2">•</span>
+                    <span>15 min read</span>
+                </div>
+                <div class="text-sm text-gray-500">
+                    <button class="text-red-500 hover:text-red-700">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Atrial Fibrillation: The Silent Heart Condition You Need to Know</h1>
+            
+            <div class="flex items-center mb-6">
+                <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                    <span class="text-blue-600 font-medium">MC</span>
+                </div>
+                <div>
+                    <p class="text-sm font-medium text-gray-800">Dr. Michael Chen</p>
+                    <p class="text-xs text-gray-500">Cardiologist & Electrophysiologist</p>
+                </div>
+            </div>
+            
+            <div class="rounded-xl overflow-hidden mb-8 relative">
+                <div class="h-64 bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center">
+                    <span class="text-8xl heart-rhythm">❤️</span>
+                    <div class="absolute bottom-0 left-0 right-0 h-16 bg-black bg-opacity-50 flex items-center justify-center">
+                        <div class="ecg-line w-64"></div>
+                    </div>
+                </div>
+                <div class="absolute bottom-0 left-0 bg-blue-600 text-white text-sm font-medium px-4 py-2">
+                    Health & Wellness
+                </div>
+            </div>
+            
+            <div class="prose max-w-none">
+                <p class="text-lg text-gray-700 mb-6">
+                    Atrial fibrillation (AFib) is a silent epidemic affecting millions worldwide, yet many people have never heard of it. 
+                    This hidden heart condition significantly increases stroke risk and can go undetected for years. 
+                    In this comprehensive guide, we'll uncover everything you need to know about AFib—the silent heart condition that could be affecting you or someone you love.
+                </p>
+                
+                <div class="bg-blue-50 p-6 rounded-lg mb-8">
+                    <h2 class="text-xl font-bold text-gray-800 mb-4">Table of Contents</h2>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li><a href="#what-is" class="text-blue-600 hover:text-blue-800">What is Atrial Fibrillation?</a></li>
+                        <li><a href="#symptoms" class="text-blue-600 hover:text-blue-800">Silent Symptoms Most People Miss</a></li>
+                        <li><a href="#risks" class="text-blue-600 hover:text-blue-800">Hidden Dangers & Stroke Connection</a></li>
+                        <li><a href="#causes" class="text-blue-600 hover:text-blue-800">Causes & Risk Factors</a></li>
+                        <li><a href="#diagnosis" class="text-blue-600 hover:text-blue-800">Diagnosis & Detection Methods</a></li>
+                        <li><a href="#treatment" class="text-blue-600 hover:text-blue-800">Treatment Options</a></li>
+                        <li><a href="#prevention" class="text-blue-600 hover:text-blue-800">Prevention Strategies</a></li>
+                    </ul>
+                </div>
+                
+                <div class="ad-container mb-8">
+                    <p class="text-xs text-gray-500 mb-2">Advertisement</p>
+                    <div class="h-64 bg-gray-100 flex items-center justify-center rounded">
+                        <p class="text-gray-500">Google AdSense Banner</p>
+                    </div>
+                </div>
+                
+                <section id="what-is" class="mb-10">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4">What is Atrial Fibrillation?</h2>
+                    <p class="text-gray-700 mb-4">
+                        Atrial fibrillation (AFib) is an irregular and often rapid heart rhythm that occurs when the upper chambers of the heart (the atria) beat chaotically and out of sync with the lower chambers (the ventricles).
+                    </p>
+                    
+                    <div class="bg-purple-50 p-6 rounded-lg mb-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">The Electrical System Gone Haywire</h3>
+                        <p class="text-gray-700 mb-4">
+                            Normally, your heart's electrical signals follow an orderly pattern, causing the heart to beat regularly. In AFib, these signals become disorganized, causing the atria to quiver instead of contracting effectively.
+                        </p>
+                        <p class="text-gray-700">
+                            This quivering prevents the heart from pumping blood efficiently, which can allow blood to pool and form clots. These clots can travel to the brain and cause a stroke.
+                        </p>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-100">
+                            <h4 class="font-bold text-gray-800 mb-2">By the Numbers</h4>
+                            <p class="text-gray-700 text-sm">
+                                AFib affects approximately 33.5 million people worldwide, and its prevalence is expected to double by 2030.
+                            </p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-100">
+                            <h4 class="font-bold text-gray-800 mb-2">The Silent Nature</h4>
+                            <p class="text-gray-700 text-sm">
+                                Up to 30% of people with AFib don't experience any symptoms, making it a truly silent condition.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                
+                <section id="symptoms" class="mb-10">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4">Silent Symptoms Most People Miss</h2>
+                    <p class="text-gray-700 mb-6">
+                        AFib symptoms can be subtle and easily dismissed as stress, anxiety, or simply "getting older." Many people live with AFib for years without realizing it.
+                    </p>
+                    
+                    <div class="important-note mb-6">
+                        <h3 class="text-xl font-bold text-purple-700 mb-2">⚠️ Don't Ignore These Subtle Signs</h3>
+                        <p class="text-gray-800">
+                            If you experience any of these symptoms—especially if they're intermittent—it's worth discussing with your healthcare provider.
+                        </p>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div class="bg-white p-6 rounded-lg shadow-sm">
+                            <h4 class="font-bold text-lg text-gray-800 mb-3">Common Symptoms</h4>
+                            <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                                <li>Palpitations (racing, fluttering, or pounding heart)</li>
+                                <li>Shortness of breath</li>
+                                <li>Fatigue or lack of energy</li>
+                                <li>Dizziness or lightheadedness</li>
+                                <li>Chest discomfort or pain</li>
+                                <li>Reduced exercise capacity</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bg-white p-6 rounded-lg shadow-sm">
+                            <h4 class="font-bold text-lg text-gray-800 mb-3">Easily Overlooked Symptoms</h4>
+                            <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                                <li>Mild anxiety or unease</li>
+                                <li>General weakness</li>
+                                <li>Need to urinate more frequently</li>
+                                <li>Confusion or "brain fog"</li>
+                                <li>Sweating without obvious cause</li>
+                                <li>Fainting or near-fainting episodes</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-blue-100 p-6 rounded-lg">
+                        <h4 class="font-bold text-lg text-gray-800 mb-3">💡 Real-Life Example</h4>
+                        <p class="text-gray-700">
+                            John, 58, noticed he would get unusually tired after climbing stairs. He attributed it to aging until he nearly fainted one day. 
+                            A visit to the cardiologist revealed he had been in AFib for months. His fatigue was due to his heart not pumping efficiently.
+                        </p>
+                    </div>
+                </section>
+                
+                <div class="ad-container mb-8">
+                    <p class="text-xs text-gray-500 mb-2">Advertisement</p>
+                    <div class="h-64 bg-gray-100 flex items-center justify-center rounded">
+                        <p class="text-gray-500">Google AdSense Rectangle</p>
+                    </div>
+                </div>
+                
+                <section id="risks" class="mb-10">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4">Hidden Dangers & Stroke Connection</h2>
+                    <p class="text-gray-700 mb-6">
+                        The most serious complication of AFib is stroke. People with AFib are 5 times more likely to have a stroke compared to those with normal heart rhythms.
+                    </p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-3">How AFib Causes Strokes</h3>
+                            <p class="text-gray-700 mb-4">
+                                When the atria quiver instead of contracting properly, blood can pool in the heart's chambers, particularly in a small pouch called the left atrial appendage.
+                            </p>
+                            <p class="text-gray-700">
+                                This stagnant blood can form clots that may break off and travel through the bloodstream to the brain, blocking blood flow and causing a stroke.
+                            </p>
+                        </div>
+                        
+                        <div class="bg-red-50 p-4 rounded-lg">
+                            <h3 class="text-xl font-bold text-gray-800 mb-3">Other Serious Complications</h3>
+                            <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                                <li><strong>Heart failure:</strong> AFib can weaken the heart muscle over time</li>
+                                <li><strong>Cognitive decline:</strong> Repeated small silent strokes can affect memory and thinking</li>
+                                <li><strong>Fatigue:</strong> Reduced cardiac output leads to persistent tiredness</li>
+                                <li><strong>Blood clots:</strong> Can travel to other organs besides the brain</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-purple-50 p-6 rounded-lg">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">The Truly Silent Danger</h3>
+                        <p class="text-gray-700 mb-4">
+                            What makes AFib particularly dangerous is that many people experience "silent AFib"—they have no noticeable symptoms but still face the same stroke risk.
+                        </p>
+                        <p class="text-gray-700">
+                            Research suggests that up to 25% of AFib-related strokes occur in people who didn't know they had the condition.
+                        </p>
+                    </div>
+                </section>
+                
+                <section id="causes" class="mb-10">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4">Causes & Risk Factors</h2>
+                    <p class="text-gray-700 mb-6">
+                        AFib doesn't have a single cause but rather develops due to a combination of factors that disrupt the heart's electrical system.
+                    </p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-3">Common Causes</h3>
+                            <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                                <li><strong>High blood pressure:</strong> The most common risk factor</li>
+                                <li><strong>Heart disease:</strong> Coronary artery disease, heart valve problems, heart failure</li>
+                                <li><strong>Age:</strong> Risk increases significantly after age 65</li>
+                                <li><strong>Thyroid problems:</strong> Overactive thyroid can trigger AFib</li>
+                                <li><strong>Alcohol consumption:</strong> "Holiday heart syndrome" from binge drinking</li>
+                                <li><strong>Other chronic conditions:</strong> Diabetes, sleep apnea, kidney disease</li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-3">Lesser-Known Risk Factors</h3>
+                            <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                                <li><strong>Family history:</strong> Genetics play a role in some cases</li>
+                                <li><strong>Obesity:</strong> Excess weight strains the cardiovascular system</li>
+                                <li><strong>European ancestry:</strong> Higher prevalence in people of European descent</li>
+                                <li><strong>Athletic training:</strong> Endurance athletes have higher risk</li>
+                                <li><strong>Inflammation:</strong> Chronic inflammatory conditions may contribute</li>
+                                <li><strong>Lung diseases:</strong> COPD and other respiratory conditions</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="important-note">
+                        <h3 class="text-xl font-bold text-purple-700 mb-2">Emerging Research</h3>
+                        <p class="text-gray-800">
+                            Recent studies suggest that COVID-19 may increase AFib risk, possibly due to the inflammation caused by the virus or as a side effect of certain treatments.
+                        </p>
+                    </div>
+                </section>
+                
+                <div class="ad-container mb-8">
+                    <p class="text-xs text-gray-500 mb-2">Advertisement</p>
+                    <div class="h-64 bg-gray-100 flex items-center justify-center rounded">
+                        <p class="text-gray-500">Google AdSense In-Article</p>
+                    </div>
+                </div>
+                
+                <section id="diagnosis" class="mb-10">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4">Diagnosis & Detection Methods</h2>
+                    <p class="text-gray-700 mb-6">
+                        Diagnosing AFib can be challenging because symptoms often come and go. Healthcare providers use several methods to detect and confirm AFib.
+                    </p>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow-sm mb-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Diagnostic Tools</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="bg-purple-600 text-white rounded-full h-8 w-8 flex items-center justify-center flex-shrink-0 mr-4">1</div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">Electrocardiogram (ECG/EKG)</h4>
+                                    <p class="text-gray-700">
+                                        The standard test for diagnosing AFib. It records the heart's electrical activity but only captures a snapshot in time.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-purple-600 text-white rounded-full h-8 w-8 flex items-center justify-center flex-shrink-0 mr-4">2</div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">Holter Monitor</h4>
+                                    <p class="text-gray-700">
+                                        A portable ECG device worn for 24-48 hours to capture intermittent rhythm abnormalities.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-purple-600 text-white rounded-full h-8 w-8 flex items-center justify-center flex-shrink-0 mr-4">3</div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">Event Monitor</h4>
+                                    <p class="text-gray-700">
+                                        Worn for several weeks and activated when symptoms occur to record the heart rhythm during episodes.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-purple-600 text-white rounded-full h-8 w-8 flex items-center justify-center flex-shrink-0 mr-4">4</div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">Mobile Cardiac Telemetry</h4>
+                                    <p class="text-gray-700">
+                                        Continuously monitors heart rhythm and automatically transmits detected abnormalities to a monitoring center.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-purple-600 text-white rounded-full h-8 w-8 flex items-center justify-center flex-shrink-0 mr-4">5</div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">Consumer Wearables</h4>
+                                    <p class="text-gray-700">
+                                        Smartwatches and fitness trackers with ECG capabilities can help detect possible AFib, though they're not diagnostic tools.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-blue-100 p-6 rounded-lg">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">The Future of AFib Detection</h3>
+                        <p class="text-gray-700">
+                            New technologies like implantable loop recorders (small devices inserted under the skin) and AI-powered algorithms are making it easier to detect 
+                            silent AFib in high-risk individuals before a stroke occurs.
+                        </p>
+                    </div>
+                </section>
+                
+                <section id="treatment" class="mb-10">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4">Treatment Options for AFib</h2>
+                    <p class="text-gray-700 mb-6">
+                        AFib treatment aims to restore normal heart rhythm, control heart rate, prevent blood clots, and reduce stroke risk. Treatment is personalized based on symptoms, AFib type, and other health factors.
+                    </p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                        <div class="prevention-tip">
+                            <div class="text-3xl text-blue-600 mb-3">💊</div>
+                            <h3 class="text-lg font-bold text-gray-800 mb-2">Medications</h3>
+                            <p class="text-gray-700 text-sm">
+                                Includes rhythm control drugs, rate control drugs, and anticoagulants (blood thinners) to reduce stroke risk.
+                            </p>
+                        </div>
+                        
+                        <div class="prevention-tip">
+                            <div class="text-3xl text-blue-600 mb-3">⚡</div>
+                            <h3 class="text-lg font-bold text-gray-800 mb-2">Cardioversion</h3>
+                            <p class="text-gray-700 text-sm">
+                                Electric shocks or medications to restore normal heart rhythm. Often a temporary solution.
+                            </p>
+                        </div>
+                        
+                        <div class="prevention-tip">
+                            <div class="text-3xl text-blue-600 mb-3">🔥</div>
+                            <h3 class="text-lg font-bold text-gray-800 mb-2">Catheter Ablation</h3>
+                            <p class="text-gray-700 text-sm">
+                                A minimally invasive procedure where energy is used to create tiny scars on the heart to block faulty electrical signals.
+                            </p>
+                        </div>
+                        
+                        <div class="prevention-tip">
+                            <div class="text-3xl text-blue-600 mb-3">❤️‍🩹</div>
+                            <h3 class="text-lg font-bold text-gray-800 mb-2">Surgical Procedures</h3>
+                            <p class="text-gray-700 text-sm">
+                                Procedures like the Maze procedure create a pattern of scar tissue to restore a normal rhythm, often done during other heart surgeries.
+                            </p>
+                        </div>
+                        
+                        <div class="prevention-tip md:col-span-2">
+                             <div class="text-3xl text-blue-600 mb-3">🛡️</div>
+                            <h3 class="text-lg font-bold text-gray-800 mb-2">Left Atrial Appendage (LAA) Closure</h3>
+                            <p class="text-gray-700 text-sm">
+                               For patients who cannot take blood thinners, a device is implanted to close off the LAA, where most AFib-related clots form, significantly reducing stroke risk.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="prevention" class="mb-10">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4">Prevention Strategies: Your First Line of Defense</h2>
+                    <p class="text-gray-700 mb-6">
+                        While some risk factors for AFib can't be changed (like age and genetics), adopting a heart-healthy lifestyle can significantly lower your risk.
+                    </p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div class="prevention-tip">
+                            <h3 class="font-bold text-gray-800 mb-2">🥗 Eat a Heart-Healthy Diet</h3>
+                            <p class="text-sm text-gray-600">Focus on fruits, vegetables, whole grains, and lean proteins. Limit sodium, saturated fats, and processed foods.</p>
+                        </div>
+                        <div class="prevention-tip">
+                            <h3 class="font-bold text-gray-800 mb-2">⚖️ Maintain a Healthy Weight</h3>
+                            <p class="text-sm text-gray-600">Obesity is a major risk factor. Losing even a small amount of weight can make a big difference.</p>
+                        </div>
+                        <div class="prevention-tip">
+                            <h3 class="font-bold text-gray-800 mb-2">🏃 Get Regular Exercise</h3>
+                            <p class="text-sm text-gray-600">Aim for at least 150 minutes of moderate-intensity exercise per week, as approved by your doctor.</p>
+                        </div>
+                        <div class="prevention-tip">
+                            <h3 class="font-bold text-gray-800 mb-2">🍷 Limit Alcohol</h3>
+                            <p class="text-sm text-gray-600">Excessive alcohol consumption can trigger AFib. Moderation is key.</p>
+                        </div>
+                        <div class="prevention-tip">
+                            <h3 class="font-bold text-gray-800 mb-2">🚭 Don't Smoke</h3>
+                            <p class="text-sm text-gray-600">Smoking damages your heart and blood vessels. Quitting is the best thing you can do for your heart health.</p>
+                        </div>
+                        <div class="prevention-tip">
+                            <h3 class="font-bold text-gray-800 mb-2">😌 Manage Stress</h3>
+                            <p class="text-sm text-gray-600">Chronic stress can contribute to heart problems. Practice relaxation techniques like meditation or yoga.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="text-center bg-blue-100 p-8 rounded-lg">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4">Take Control of Your Heart Health</h2>
+                    <p class="text-gray-700 max-w-2xl mx-auto mb-6">
+                        Atrial fibrillation is a serious but manageable condition. Understanding the signs, knowing your risks, and working with your healthcare provider are the keys to living a long, healthy life. Don't let this silent condition go undetected.
+                    </p>
+                    <a href="#diagnosis" class="btn-primary text-white font-bold py-3 px-6 rounded-full inline-block">
+                        Learn About Diagnosis
+                    </a>
+                </section>
+                
+            </div>
+        </article>
+        
+    </main>
+
+    <footer class="bg-gray-800 text-white">
+        <div class="container mx-auto px-4 py-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <a href="index.html" class="flex items-center space-x-2 mb-4">
+                        <span class="text-3xl">🥷</span>
+                        <span class="text-2xl font-bold">Topper Ninja</span>
+                    </a>
+                    <p class="text-gray-400 text-sm">Your source for clear, reliable health and wellness information.</p>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white">About Us</a></li>
+                        <li><a href="#" class="hover:text-white">Contact Us</a></li>
+                        <li><a href="#" class="hover:text-white">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-white">Terms of Service</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Categories</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white">Heart Health</a></li>
+                        <li><a href="#" class="hover:text-white">Nutrition</a></li>
+                        <li><a href="#" class="hover:text-white">Fitness</a></li>
+                        <li><a href="#" class="hover:text-white">Mental Wellness</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" aria-label="Twitter" class="text-gray-400 hover:text-white"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22.46 6c-.77.35-1.6.58-2.46.67.88-.53 1.56-1.37 1.88-2.38-.83.49-1.74.85-2.7 1.03A4.5 4.5 0 0016.3 4a4.49 4.49 0 00-4.49 4.49c0 .34.04.67.11.98-3.73-.19-7.03-1.98-9.24-4.68A4.49 4.49 0 004.1 9.62a4.5 4.5 0 01-2.03-.56v.06c0 1.95 1.39 3.58 3.23 3.95a4.5 4.5 0 01-2.02.08c.51 1.6 1.99 2.76 3.75 2.8-1.38 1.08-3.12 1.73-5.02 1.73-.33 0-.65-.02-.97-.06 1.79 1.15 3.92 1.82 6.22 1.82 7.46 0 11.54-6.18 11.54-11.54v-.52c.8-.58 1.48-1.3 2.02-2.12z"/></svg></a>
+                        <a href="#" aria-label="Facebook" class="text-gray-400 hover:text-white"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm3.42 7.9h-1.6V8.6c0-.5.22-.7.62-.7h.9V6.2h-1.42c-1.6 0-2.3 1-2.3 2.5v1.2H10v1.9h1.22V19h2.2v-7.2h1.3l.2-1.9z"/></svg></a>
+                        <a href="#" aria-label="Instagram" class="text-gray-400 hover:text-white"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.04c-2.83 0-3.16.01-4.27.06-1.1.05-1.86.22-2.52.48-.68.27-1.25.63-1.82 1.2-.56.56-.93 1.14-1.2 1.82-.26.66-.43 1.42-.48 2.52-.05 1.1-.06 1.44-.06 4.27s.01 3.17.06 4.27c.05 1.1.22 1.86.48 2.52.27.68.63 1.25 1.2 1.82.56.56 1.14.93 1.82 1.2.66.26 1.42.43 2.52.48 1.1.05 1.44.06 4.27.06s3.17-.01 4.27-.06c1.1-.05 1.86-.22 2.52-.48.68-.27 1.25-.63 1.82-1.2.56-.56.93-1.14-1.2-1.82-.26-.66-.43-1.42-.48-2.52-.05-1.1-.06-1.44-.06-4.27s.01-3.17.06-4.27c.05-1.1.22-1.86.48-2.52.27-.68.63-1.25 1.2-1.82.56-.56 1.14-.93 1.82-1.2.66-.26 1.42-.43 2.52-.48C15.16 2.05 14.83 2.04 12 2.04zm0 1.8c2.75 0 3.06.01 4.14.06.98.04 1.53.2 1.88.34.46.18.78.43 1.13.78.35.35.6.67.78 1.13.14.35.3.9.34 1.88.05 1.08.06 1.39.06 4.14s-.01 3.06-.06 4.14c-.04.98-.2 1.53-.34 1.88-.18.46-.43.78-.78 1.13-.35.35-.67.6-1.13.78-.35.14-.9.3-1.88.34-1.08.05-1.39.06-4.14.06s-3.06-.01-4.14-.06c-.98-.04-1.53-.2-1.88-.34-.46-.18-.78-.43-1.13-.78-.35-.35-.67-.6-1.13-.78-.35-.14-.9-.3-1.88-.34-1.08-.05-1.39-.06-4.14-.06s-.01-3.06.06-4.14c.04-.98.2-1.53.34-1.88.18-.46.43-.78.78-1.13.35-.35.67-.6 1.13-.78.35-.14.9-.3 1.88-.34 1.08-.05 1.39-.06 4.14-.06zm0 2.97c-1.92 0-3.48 1.56-3.48 3.48s1.56 3.48 3.48 3.48 3.48-1.56 3.48-3.48-1.56-3.48-3.48-3.48zm0 5.66c-1.2 0-2.18-.98-2.18-2.18S10.8 9.82 12 9.82s2.18.98 2.18 2.18-.98 2.18-2.18 2.18zm4.33-5.72c-.6 0-1.08-.48-1.08-1.08s.48-1.08 1.08-1.08 1.08.48 1.08 1.08-.48 1.08-1.08 1.08z"/></svg></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-400 text-sm">
+                <p>&copy; 2025 Topper Ninja. All Rights Reserved.</p>
+                <p class="mt-1">Disclaimer: The information provided on this website is for educational purposes only and is not a substitute for professional medical advice, diagnosis, or treatment.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Loading animation
+        window.addEventListener('load', () => {
+            const loading = document.getElementById('loading');
+            loading.style.opacity = '0';
+            setTimeout(() => {
+                loading.style.display = 'none';
+            }, 500);
+        });
+        
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
